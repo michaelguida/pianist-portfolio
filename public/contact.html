@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Dr. Michael Guida | Schedule Piano Lessons in Scottsdale</title>
+  <meta name="description" content="Contact Dr. Michael Guida to schedule your first piano lesson in Scottsdale. Serving Scottsdale, Paradise Valley, Phoenix, Tempe, and Arcadia.">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="/index.html" class="nav-logo">Dr. Michael Guida</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about-me.html">About</a></li>
+        <li><a href="/piano-lessons-scottsdale.html">Lessons</a></li>
+        <li><a href="/performances.html">Performances</a></li>
+        <li><a href="/student-recitals.html">Student Recitals</a></li>
+        <li><a href="/contact.html" class="active">Contact</a></li>
+      </ul>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section style="padding-top: 160px; padding-bottom: 80px; background: var(--charcoal);">
+    <div class="container text-center">
+      <div class="decorative-line" style="margin: 0 auto 32px;"></div>
+      <h1 class="font-serif" style="font-size: clamp(3rem, 6vw, 4rem); color: white; font-style: italic; margin-bottom: 24px;">Get in Touch</h1>
+      <p class="font-sans" style="color: rgba(255,255,255,0.6);">Ready to begin your musical journey?</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section-padding bg-cream">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 64px;">
+        <!-- Info -->
+        <div>
+          <h2 class="font-serif" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--charcoal); margin-bottom: 32px;">Let's Connect</h2>
+          <p class="font-sans" style="color: rgba(0,0,0,0.6); line-height: 1.8; margin-bottom: 40px;">
+            Whether you're ready to schedule your first lesson or have questions,
+            I'd love to hear from you.
+          </p>
+          <div style="space-y: 32px;">
+            <div style="display: flex; align-items: start; gap: 20px; margin-bottom: 32px;">
+              <div style="width: 48px; height: 48px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--copper)" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="font-sans" style="color: var(--charcoal); font-weight: 500; margin-bottom: 4px;">michaelguidapiano@me.com</div>
+                <div class="font-sans" style="color: rgba(0,0,0,0.5); font-size: 14px;">Response within 24 hours</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: start; gap: 20px; margin-bottom: 32px;">
+              <div style="width: 48px; height: 48px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--copper)" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <div class="font-sans" style="color: var(--charcoal); font-weight: 500; margin-bottom: 4px;">Scottsdale - McCormick Ranch, AZ</div>
+                <div class="font-sans" style="color: rgba(0,0,0,0.5); font-size: 14px;">Serving Scottsdale, Paradise Valley, Phoenix, Tempe, and Arcadia</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div style="background: white; padding: 48px; box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
+          <h3 class="font-serif" style="font-size: 28px; color: var(--charcoal); margin-bottom: 32px;">Send a Message</h3>
+
+          <div id="successMessage" style="display: none; margin-bottom: 24px; padding: 16px; background: #d4edda; border: 1px solid #c3e6cb; color: #155724; border-radius: 4px;">
+            <p class="font-sans" style="font-size: 14px; margin: 0;">Thank you for your inquiry! I'll be in touch soon.</p>
+          </div>
+
+          <div id="errorMessage" style="display: none; margin-bottom: 24px; padding: 16px; background: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; border-radius: 4px;">
+            <p class="font-sans" style="font-size: 14px; margin: 0;">Sorry, there was an error sending your message. Please try emailing directly.</p>
+          </div>
+
+          <form id="contactForm" style="space-y: 24px;">
+            <div style="margin-bottom: 24px;">
+              <label class="font-sans" style="display: block; font-size: 14px; color: rgba(0,0,0,0.6); margin-bottom: 8px;">Name *</label>
+              <input type="text" name="name" required
+                style="width: 100%; padding: 12px 16px; border: 1px solid rgba(0,0,0,0.2); font-family: 'Outfit', sans-serif; transition: border-color 0.3s;"
+                onfocus="this.style.borderColor='var(--copper)'"
+                onblur="this.style.borderColor='rgba(0,0,0,0.2)'">
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-bottom: 24px;">
+              <div>
+                <label class="font-sans" style="display: block; font-size: 14px; color: rgba(0,0,0,0.6); margin-bottom: 8px;">Email *</label>
+                <input type="email" name="email" required
+                  style="width: 100%; padding: 12px 16px; border: 1px solid rgba(0,0,0,0.2); font-family: 'Outfit', sans-serif; transition: border-color 0.3s;"
+                  onfocus="this.style.borderColor='var(--copper)'"
+                  onblur="this.style.borderColor='rgba(0,0,0,0.2)'">
+              </div>
+              <div>
+                <label class="font-sans" style="display: block; font-size: 14px; color: rgba(0,0,0,0.6); margin-bottom: 8px;">Phone</label>
+                <input type="tel" name="phone"
+                  style="width: 100%; padding: 12px 16px; border: 1px solid rgba(0,0,0,0.2); font-family: 'Outfit', sans-serif; transition: border-color 0.3s;"
+                  onfocus="this.style.borderColor='var(--copper)'"
+                  onblur="this.style.borderColor='rgba(0,0,0,0.2)'">
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-bottom: 24px;">
+              <div>
+                <label class="font-sans" style="display: block; font-size: 14px; color: rgba(0,0,0,0.6); margin-bottom: 8px;">Interest</label>
+                <select name="interest"
+                  style="width: 100%; padding: 12px 16px; border: 1px solid rgba(0,0,0,0.2); font-family: 'Outfit', sans-serif; background: white; transition: border-color 0.3s;"
+                  onfocus="this.style.borderColor='var(--copper)'"
+                  onblur="this.style.borderColor='rgba(0,0,0,0.2)'">
+                  <option value="lessons">Piano Lessons</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label class="font-sans" style="display: block; font-size: 14px; color: rgba(0,0,0,0.6); margin-bottom: 8px;">Experience Level</label>
+                <select name="experience"
+                  style="width: 100%; padding: 12px 16px; border: 1px solid rgba(0,0,0,0.2); font-family: 'Outfit', sans-serif; background: white; transition: border-color 0.3s;"
+                  onfocus="this.style.borderColor='var(--copper)'"
+                  onblur="this.style.borderColor='rgba(0,0,0,0.2)'">
+                  <option value="beginner">Complete Beginner</option>
+                  <option value="some">Some Experience</option>
+                  <option value="intermediate">Intermediate</option>
+                  <option value="advanced">Advanced</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 24px;">
+              <label class="font-sans" style="display: block; font-size: 14px; color: rgba(0,0,0,0.6); margin-bottom: 8px;">Message *</label>
+              <textarea name="message" rows="5" required
+                placeholder="Tell me about your goals..."
+                style="width: 100%; padding: 12px 16px; border: 1px solid rgba(0,0,0,0.2); font-family: 'Outfit', sans-serif; resize: vertical; transition: border-color 0.3s;"
+                onfocus="this.style.borderColor='var(--copper)'"
+                onblur="this.style.borderColor='rgba(0,0,0,0.2)'"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-padding" style="background: white;">
+    <div class="container">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="text-center" style="margin-bottom: 64px;">
+          <div class="decorative-line" style="margin: 0 auto 32px;"></div>
+          <h2 class="font-serif" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--charcoal);">Common Questions</h2>
+        </div>
+        <div style="space-y: 32px;">
+          <div style="padding-bottom: 24px; border-bottom: 1px solid rgba(0,0,0,0.1); margin-bottom: 24px;">
+            <h3 class="font-serif" style="font-size: 20px; color: var(--charcoal); margin-bottom: 12px;">Do I need a piano at home?</h3>
+            <p class="font-sans" style="color: rgba(0,0,0,0.6); line-height: 1.8;">While ideal, I can help you find the right instrument for your budget and space.</p>
+          </div>
+          <div style="padding-bottom: 24px; border-bottom: 1px solid rgba(0,0,0,0.1); margin-bottom: 24px;">
+            <h3 class="font-serif" style="font-size: 20px; color: var(--charcoal); margin-bottom: 12px;">How long are lessons?</h3>
+            <p class="font-sans" style="color: rgba(0,0,0,0.6); line-height: 1.8;">I offer 30, 45, and 60 minute lessons depending on the needs of the student.</p>
+          </div>
+          <div style="padding-bottom: 24px; border-bottom: 1px solid rgba(0,0,0,0.1); margin-bottom: 24px;">
+            <h3 class="font-serif" style="font-size: 20px; color: var(--charcoal); margin-bottom: 12px;">What ages do you teach?</h3>
+            <p class="font-sans" style="color: rgba(0,0,0,0.6); line-height: 1.8;">All ages. It's never too early or too late to start!</p>
+          </div>
+          <div style="padding-bottom: 24px; border-bottom: 1px solid rgba(0,0,0,0.1); margin-bottom: 24px;">
+            <h3 class="font-serif" style="font-size: 20px; color: var(--charcoal); margin-bottom: 12px;">Where are lessons held?</h3>
+            <p class="font-sans" style="color: rgba(0,0,0,0.6); line-height: 1.8;">Lessons are held in my professional in-home studio in Scottsdale - McCormick Ranch area.</p>
+          </div>
+          <div style="padding-bottom: 24px; border-bottom: 1px solid rgba(0,0,0,0.1); margin-bottom: 24px;">
+            <h3 class="font-serif" style="font-size: 20px; color: var(--charcoal); margin-bottom: 12px;">What if I've never played before?</h3>
+            <p class="font-sans" style="color: rgba(0,0,0,0.6); line-height: 1.8;">Wonderful! Complete beginners are always welcome. I'll guide you from your very first note.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div>
+          <h3>Dr. Michael Guida</h3>
+          <p>
+            Award-winning pianist and educator dedicated to helping students of all ages
+            discover the joy of piano.
+          </p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul class="footer-nav">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about-me.html">About</a></li>
+            <li><a href="/piano-lessons-scottsdale.html">Lessons</a></li>
+            <li><a href="/performances.html">Performances</a></li>
+            <li><a href="/student-recitals.html">Student Recitals</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>Scottsdale, Arizona</p>
+          <p>michaelguidapiano@me.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Dr. Michael Guida. All rights reserved.</p>
+        <div class="decorative-line"></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('mobile-open');
+    });
+
+    // Contact form submission
+    const contactForm = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+    const errorMessage = document.getElementById('errorMessage');
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(contactForm);
+      const data = Object.fromEntries(formData);
+
+      try {
+        // You'll need to set up a form submission service like Formspree, Web3Forms, or EmailJS
+        // For now, this is a placeholder that logs to console
+        console.log('Form data:', data);
+
+        // Simulate success (replace with actual form submission)
+        successMessage.style.display = 'block';
+        errorMessage.style.display = 'none';
+        contactForm.reset();
+
+        // Scroll to success message
+        successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      } catch (error) {
+        console.error('Error:', error);
+        errorMessage.style.display = 'block';
+        successMessage.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
