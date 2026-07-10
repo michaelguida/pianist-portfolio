@@ -2,7 +2,16 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
+    { "source": "/index.html", "destination": "/", "statusCode": 301 },
+    { "source": "/about-me.html", "destination": "/about-me", "statusCode": 301 },
+    { "source": "/piano-lessons-scottsdale.html", "destination": "/piano-lessons-scottsdale", "statusCode": 301 },
+    { "source": "/performances.html", "destination": "/performances", "statusCode": 301 },
+    { "source": "/student-recitals.html", "destination": "/student-recitals", "statusCode": 301 },
+    { "source": "/contact.html", "destination": "/contact", "statusCode": 301 },
+    { "source": "/privacy-policy.html", "destination": "/privacy-policy", "statusCode": 301 },
+    { "source": "/terms-conditions.html", "destination": "/terms-conditions", "statusCode": 301 },
+    { "source": "/home", "destination": "/", "statusCode": 301 },
     { "source": "/home-1", "destination": "/", "statusCode": 301 },
-    { "source": "/terms-conditions", "destination": "/privacy-policy", "statusCode": 301 }
+    { "source": "/terms-and-conditions", "destination": "/terms-conditions", "statusCode": 301 }
   ]
 }
