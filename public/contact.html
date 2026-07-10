@@ -55,7 +55,7 @@
                 </svg>
               </div>
               <div>
-                <div class="font-sans" style="color: var(--charcoal); font-weight: 500; margin-bottom: 4px;">michaeltguida@gmail.com</div>
+                <div class="font-sans" style="color: var(--charcoal); font-weight: 500; margin-bottom: 4px;"><a href="mailto:michaeltguida@gmail.com" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">michaeltguida@gmail.com</a></div>
                 <div class="font-sans" style="color: rgba(0,0,0,0.5); font-size: 14px;">Response within 24 hours</div>
               </div>
             </div>
@@ -98,6 +98,13 @@
           </div>
 
           <form id="contactForm" style="space-y: 24px;">
+            <!-- Web3Forms delivery settings -->
+            <input type="hidden" name="access_key" value="3f8c02ae-91f2-4e5f-9f67-192ea2126f3a">
+            <input type="hidden" name="subject" value="New inquiry from your piano website">
+            <input type="hidden" name="from_name" value="Michael Guida Website">
+            <!-- Honeypot spam trap (bots fill this, humans never see it) -->
+            <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display: none;">
+
             <div style="margin-bottom: 24px;">
               <label class="font-sans" style="display: block; font-size: 14px; color: rgba(0,0,0,0.6); margin-bottom: 8px;">Name *</label>
               <input type="text" name="name" required
@@ -115,8 +122,8 @@
                   onblur="this.style.borderColor='rgba(0,0,0,0.2)'">
               </div>
               <div>
-                <label class="font-sans" style="display: block; font-size: 14px; color: rgba(0,0,0,0.6); margin-bottom: 8px;">Phone</label>
-                <input type="tel" name="phone"
+                <label class="font-sans" style="display: block; font-size: 14px; color: rgba(0,0,0,0.6); margin-bottom: 8px;">Phone *</label>
+                <input type="tel" name="phone" required
                   style="width: 100%; padding: 12px 16px; border: 1px solid rgba(0,0,0,0.2); font-family: 'Outfit', sans-serif; transition: border-color 0.3s;"
                   onfocus="this.style.borderColor='var(--copper)'"
                   onblur="this.style.borderColor='rgba(0,0,0,0.2)'">
@@ -125,21 +132,23 @@
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-bottom: 24px;">
               <div>
-                <label class="font-sans" style="display: block; font-size: 14px; color: rgba(0,0,0,0.6); margin-bottom: 8px;">Interest</label>
-                <select name="interest"
+                <label class="font-sans" style="display: block; font-size: 14px; color: rgba(0,0,0,0.6); margin-bottom: 8px;">Interest *</label>
+                <select name="interest" required
                   style="width: 100%; padding: 12px 16px; border: 1px solid rgba(0,0,0,0.2); font-family: 'Outfit', sans-serif; background: white; transition: border-color 0.3s;"
                   onfocus="this.style.borderColor='var(--copper)'"
                   onblur="this.style.borderColor='rgba(0,0,0,0.2)'">
+                  <option value="" disabled selected>Choose one</option>
                   <option value="lessons">Piano Lessons</option>
                   <option value="other">Other</option>
                 </select>
               </div>
               <div>
-                <label class="font-sans" style="display: block; font-size: 14px; color: rgba(0,0,0,0.6); margin-bottom: 8px;">Experience Level</label>
+                <label id="experienceLabel" class="font-sans" style="display: block; font-size: 14px; color: rgba(0,0,0,0.6); margin-bottom: 8px;">Experience Level</label>
                 <select name="experience"
                   style="width: 100%; padding: 12px 16px; border: 1px solid rgba(0,0,0,0.2); font-family: 'Outfit', sans-serif; background: white; transition: border-color 0.3s;"
                   onfocus="this.style.borderColor='var(--copper)'"
                   onblur="this.style.borderColor='rgba(0,0,0,0.2)'">
+                  <option value="" disabled selected>Choose one</option>
                   <option value="beginner">Complete Beginner</option>
                   <option value="some">Some Experience</option>
                   <option value="intermediate">Intermediate</option>
@@ -160,6 +169,9 @@
             <button type="submit" class="btn btn-primary" style="width: 100%;">
               Send Message
             </button>
+            <p class="font-sans" style="text-align: center; font-size: 13px; color: rgba(0,0,0,0.5); margin-top: 16px;">
+              This goes straight to my inbox. I usually reply the same day.
+            </p>
           </form>
         </div>
       </div>
@@ -242,7 +254,7 @@
           <h4>Contact</h4>
           <p>Scottsdale, Arizona</p>
           <p>(480) 221-9587</p>
-          <p>michaeltguida@gmail.com</p>
+          <p><a href="mailto:michaeltguida@gmail.com" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">michaeltguida@gmail.com</a></p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -274,30 +286,72 @@
     const contactForm = document.getElementById('contactForm');
     const successMessage = document.getElementById('successMessage');
     const errorMessage = document.getElementById('errorMessage');
+    const phoneField = contactForm.querySelector('input[name="phone"]');
+
+    // Auto-format phone as (XXX) XXX-XXXX and clear any prior validation message
+    phoneField.addEventListener('input', () => {
+      phoneField.setCustomValidity('');
+      const d = phoneField.value.replace(/\D/g, '').slice(0, 10);
+      if (d.length > 6) phoneField.value = `(${d.slice(0, 3)}) ${d.slice(3, 6)}-${d.slice(6)}`;
+      else if (d.length > 3) phoneField.value = `(${d.slice(0, 3)}) ${d.slice(3)}`;
+      else if (d.length > 0) phoneField.value = `(${d}`;
+      else phoneField.value = '';
+    });
+
+    // Experience Level is required only when the visitor is interested in Piano Lessons
+    const interestField = contactForm.querySelector('select[name="interest"]');
+    const experienceField = contactForm.querySelector('select[name="experience"]');
+    const experienceLabel = document.getElementById('experienceLabel');
+    const syncExperienceRequired = () => {
+      const needed = interestField.value === 'lessons';
+      experienceField.required = needed;
+      experienceLabel.textContent = needed ? 'Experience Level *' : 'Experience Level';
+    };
+    interestField.addEventListener('change', syncExperienceRequired);
+    syncExperienceRequired();
 
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
+      // Phone is optional, but if provided it must be a complete 10-digit number
+      const phoneDigits = phoneField.value.replace(/\D/g, '');
+      if (phoneField.value.trim() && phoneDigits.length !== 10) {
+        phoneField.setCustomValidity('Please enter a complete 10-digit phone number, or leave it blank.');
+        phoneField.reportValidity();
+        return;
+      }
+      phoneField.setCustomValidity('');
+
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
       const formData = new FormData(contactForm);
-      const data = Object.fromEntries(formData);
 
       try {
-        // You'll need to set up a form submission service like Formspree, Web3Forms, or EmailJS
-        // For now, this is a placeholder that logs to console
-        console.log('Form data:', data);
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+        const result = await response.json();
 
-        // Simulate success (replace with actual form submission)
-        successMessage.style.display = 'block';
-        errorMessage.style.display = 'none';
-        contactForm.reset();
-
-        // Scroll to success message
-        successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
+        if (result.success) {
+          successMessage.style.display = 'block';
+          errorMessage.style.display = 'none';
+          contactForm.reset();
+          successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          throw new Error(result.message || 'Submission failed');
+        }
       } catch (error) {
         console.error('Error:', error);
         errorMessage.style.display = 'block';
         successMessage.style.display = 'none';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
       }
     });
   </script>

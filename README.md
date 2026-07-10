@@ -1,16 +1,34 @@
-# React + Vite
+# Dr. Michael Guida — Piano Studio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A static website for Dr. Michael Guida's piano studio in Scottsdale, Arizona.
+Built as plain HTML and CSS (no build step) and deployed as a static site on Vercel.
 
-Currently, two official plugins are available:
+## Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Everything lives in [`public/`](public/), which is the deployed root:
 
-## React Compiler
+- `index.html` — home
+- `about-me.html` — about / bio
+- `piano-lessons-scottsdale.html` — lessons
+- `performances.html` — performance videos
+- `student-recitals.html` — student recital videos
+- `contact.html` — contact form (delivers to email via Web3Forms)
+- `privacy-policy.html` — privacy policy
+- `styles.css` — shared styles
+- images, `favicon.svg`, `icons.svg`
+- `vercel.json` — Vercel static hosting config (clean URLs)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Local preview
 
-## Expanding the Oxlint configuration
+No dependencies to install. Serve the `public/` folder with any static server, e.g.:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```
+npx serve public
+```
+
+Then open the printed URL (e.g. http://localhost:3000).
+
+## Deploy
+
+Hosted on Vercel with the project root set to `public/`. Pushing to the
+default branch publishes the site.
