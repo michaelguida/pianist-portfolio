@@ -95,8 +95,11 @@ body {
   transition: background 0.25s ease;
 }
 
-.yt-facade:hover .yt-play {
-  background: var(--copper);
+/* Only apply hover on real pointers, so touch devices don't need a double-tap */
+@media (hover: hover) {
+  .yt-facade:hover .yt-play {
+    background: var(--copper);
+  }
 }
 
 .yt-facade .yt-play svg {
