@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="title">
   <title id="title">Piano keyboard icon</title>
   <rect width="48" height="48" rx="8" fill="#1a1a1a"/>
-  <rect x="4.5" y="7.5" width="39" height="33" rx="3.5" fill="#c07832"/>
-  <rect x="6" y="9.5" width="36" height="29" rx="1.5" fill="#f7f3ea"/>
-  <path d="M11.14 9.5v29M16.29 9.5v29M21.43 9.5v29M26.57 9.5v29M31.71 9.5v29M36.86 9.5v29" stroke="#1a1a1a" stroke-width=".9"/>
-  <path d="M9.49 9.5h3.3v18h-3.3zM14.64 9.5h3.3v18h-3.3zM24.92 9.5h3.3v18h-3.3zM30.06 9.5h3.3v18h-3.3zM35.21 9.5h3.3v18h-3.3z" fill="#1a1a1a"/>
+  <rect x="4.5" y="5.5" width="39" height="37" rx="4" fill="none" stroke="#f7f3ea" stroke-width="1.5" opacity=".75"/>
+  <rect x="9" y="10" width="30" height="28" rx="1.5" fill="#f7f3ea"/>
+  <path d="M16.5 10v28M24 10v28M31.5 10v28" stroke="#1a1a1a" stroke-width="1"/>
+  <path d="M14.4 10h4.2v17.5h-4.2zM21.9 10h4.2v17.5h-4.2zM29.4 10h4.2v17.5h-4.2z" fill="#1a1a1a"/>
 </svg>
