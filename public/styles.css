@@ -64,6 +64,47 @@ body {
   transform: scale(1.03);
 }
 
+/* Lazy YouTube facade (real player loads only on click) */
+.yt-facade {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.yt-facade img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.yt-facade .yt-play {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 68px;
+  height: 48px;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.55);
+  border: none;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.yt-facade:hover .yt-play {
+  background: var(--copper);
+}
+
+.yt-facade .yt-play svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+
 .line-reveal {
   position: relative;
 }
