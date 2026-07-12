@@ -149,6 +149,10 @@ section[style*="padding-top: 160px"] {
   .section-padding {
     padding: 48px 0;
   }
+
+  .about-bio-sidebar {
+    display: none;
+  }
 }
 
 /* Navigation */
