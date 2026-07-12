@@ -479,6 +479,15 @@ footer {
     padding: 24px !important;
   }
 
+  .btn {
+    max-width: 100%;
+    padding: 14px 24px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    line-height: 1.35;
+    text-align: center;
+  }
+
   @keyframes scroll {
     0% {
       transform: translateX(0);
