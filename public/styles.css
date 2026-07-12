@@ -105,6 +105,17 @@ body {
   fill: #fff;
 }
 
+/* Featured performance: on mobile, put the intro text above the video and tighten the gap */
+@media (max-width: 768px) {
+  .featured-perf {
+    gap: 28px !important;
+  }
+
+  .featured-perf > div:first-child {
+    order: 2;
+  }
+}
+
 .line-reveal {
   position: relative;
 }
