@@ -177,6 +177,14 @@ body {
   padding: 80px 0;
 }
 
+.lessons-testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
 .about-bio-section {
   padding-top: 56px;
 }
@@ -216,6 +224,21 @@ section[style*="padding-top: 160px"] {
 @media (max-width: 768px) {
   .section-padding {
     padding: 48px 0;
+  }
+
+  .lessons-testimonial-grid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(280px, 86%);
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scrollbar-width: thin;
+    padding-bottom: 14px;
+  }
+
+  .lessons-testimonial-card {
+    scroll-snap-align: start;
   }
 
   .about-bio-section {
