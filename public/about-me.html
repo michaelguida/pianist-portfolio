@@ -52,7 +52,7 @@
     <div style="position: absolute; top: 50%; left: -160px; width: 320px; height: 320px; background: rgba(184,115,51,0.1); border-radius: 50%; filter: blur(80px);"></div>
     <div class="container text-center" style="position: relative; z-index: 10;">
       <div class="decorative-line" style="margin: 0 auto 32px;"></div>
-      <h1 class="font-serif" style="font-size: clamp(3rem, 6vw, 4rem); color: white; font-style: italic; margin-bottom: 24px;">About Dr. Michael Guida</h1>
+      <h1 class="font-serif" style="font-size: clamp(3rem, 7vw, 5rem); color: white; font-weight: 300; line-height: 1.12; margin-bottom: 24px;">About Dr. Michael Guida</h1>
       <p class="font-sans" style="color: rgba(255,255,255,0.7); font-size: clamp(1rem, 2vw, 1.25rem); max-width: 700px; margin: 0 auto;">
         A lifelong dedication to the art of piano and the joy of teaching.
       </p>
@@ -60,31 +60,61 @@
   </section>
 
   <!-- Bio -->
-  <section class="section-padding" style="background: white;">
+  <section class="section-padding about-bio-section" style="background: white;">
     <div class="container">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 64px;">
         <!-- Photo -->
         <div class="about-bio-sidebar">
-          <div style="position: sticky; top: 128px;">
-            <div class="photo-frame" style="margin-bottom: 40px;">
-              <div style="aspect-ratio: 3/4; background: #ddd; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); overflow: hidden;">
-                <img src="/hero-piano.webp" alt="Dr. Michael Guida portrait" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" decoding="async">
+          <div class="about-sticky-sidebar">
+            <div class="photo-frame about-sidebar-photo-frame">
+              <div class="about-sidebar-photo" style="background: #ddd; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); overflow: hidden;">
+                <img src="/hero-piano.webp" alt="Dr. Michael Guida portrait" style="width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 18%;" loading="lazy" decoding="async">
               </div>
             </div>
-            <div style="space-y: 16px;">
-              <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--copper)" stroke-width="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                <span class="font-sans" style="color: rgba(0,0,0,0.6);">Scottsdale - McCormick Ranch, AZ</span>
+
+            <div style="display: grid; gap: 14px;">
+              <div style="padding: 18px 20px; background: var(--cream); border-left: 3px solid var(--copper); box-shadow: 0 14px 32px rgba(0,0,0,0.08);">
+                <p class="font-sans" style="color: var(--copper); font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 12px;">
+                  Awards &amp; Recognition
+                </p>
+                <div style="display: grid; gap: 10px;">
+                  <div>
+                    <p class="font-serif" style="font-size: 19px; color: var(--charcoal); line-height: 1.12;">Steinway &amp; Sons Scottsdale Top Teacher Award</p>
+                    <p class="font-sans" style="color: rgba(0,0,0,0.55); font-size: 13px; line-height: 1.45;">Received in 2024 and 2025 for excellence in piano teaching</p>
+                  </div>
+                  <div>
+                    <p class="font-serif" style="font-size: 19px; color: var(--charcoal); line-height: 1.12;">Joe R. &amp; Teresa Lozano Long Piano Scholarship</p>
+                    <p class="font-sans" style="color: rgba(0,0,0,0.55); font-size: 13px; line-height: 1.45;">Full tuition scholarship and teaching assistantship at the University of Texas at Austin</p>
+                  </div>
+                  <div>
+                    <p class="font-serif" style="font-size: 19px; color: var(--charcoal); line-height: 1.12;">Robert and Judi Newman Fellowship</p>
+                    <p class="font-sans" style="color: rgba(0,0,0,0.55); font-size: 13px; line-height: 1.45;">Full-tuition graduate fellowship at the University of Denver, awarded university-wide every two years</p>
+                  </div>
+                  <div>
+                    <p class="font-serif" style="font-size: 19px; color: var(--charcoal); line-height: 1.12;">First Prize, International Great Composers Competition</p>
+                    <p class="font-sans" style="color: rgba(0,0,0,0.55); font-size: 13px; line-height: 1.45;">First Prize recipient, with Best Schubert Performance distinction</p>
+                  </div>
+                </div>
               </div>
-              <div style="display: flex; align-items: center; gap: 16px;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--copper)" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-                <span class="font-sans" style="color: rgba(0,0,0,0.6);"><a href="mailto:michaeltguida@gmail.com" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">michaeltguida@gmail.com</a></span>
+
+              <div style="padding: 18px 20px; background: var(--cream); border-left: 3px solid var(--copper); box-shadow: 0 14px 32px rgba(0,0,0,0.08);">
+                <p class="font-sans" style="color: var(--copper); font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 12px;">
+                  Education &amp; Training
+                </p>
+                <div style="display: grid; gap: 10px;">
+                  <div>
+                    <p class="font-serif" style="font-size: 19px; color: var(--charcoal); line-height: 1.12;">Doctor of Musical Arts</p>
+                    <p class="font-sans" style="color: rgba(0,0,0,0.55); font-size: 13px; line-height: 1.45;">University of Texas at Austin; piano studies with Anton Nel</p>
+                  </div>
+                  <div>
+                    <p class="font-serif" style="font-size: 19px; color: var(--charcoal); line-height: 1.12;">Master &amp; Bachelor of Music, Piano Performance</p>
+                    <p class="font-sans" style="color: rgba(0,0,0,0.55); font-size: 13px; line-height: 1.45;">University of Denver; piano studies with Steven Mayer</p>
+                  </div>
+                  <div>
+                    <p class="font-serif" style="font-size: 19px; color: var(--charcoal); line-height: 1.12;">Advanced Pedagogical Training</p>
+                    <p class="font-sans" style="color: rgba(0,0,0,0.55); font-size: 13px; line-height: 1.45;">University of Texas at Austin; pedagogy studies with Martha Hilley</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -94,9 +124,55 @@
         <div style="max-width: 700px;">
           <p class="font-serif" style="font-size: clamp(1.5rem, 3vw, 2rem); color: rgba(0,0,0,0.8); line-height: 1.6; margin-bottom: 40px;">
             Presented with the Steinway &amp; Sons Scottsdale <em>Top Teacher</em> Award in both 2024 and 2025,
-            Dr. Michael Guida is an accomplished pianist and dedicated piano educator with over two decades
+            Dr. Michael Guida is an accomplished pianist and dedicated piano instructor with over two decades
             of experience in classical music, bringing world-class training to students of all ages and levels.
           </p>
+
+          <div class="about-credentials-mobile" style="margin: -10px 0 36px;">
+            <div style="padding: 22px; background: var(--cream); border-left: 3px solid var(--copper); box-shadow: 0 12px 28px rgba(0,0,0,0.08); margin-bottom: 18px;">
+              <p class="font-sans" style="color: var(--copper); font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 14px;">
+                Awards &amp; Recognition
+              </p>
+              <div style="display: grid; gap: 12px;">
+                <div>
+                  <p class="font-serif" style="font-size: 21px; color: var(--charcoal); line-height: 1.15;">Steinway &amp; Sons Scottsdale Top Teacher Award</p>
+                  <p class="font-sans" style="color: rgba(0,0,0,0.55); font-size: 14px;">Received in 2024 and 2025 for excellence in piano teaching</p>
+                </div>
+                <div>
+                  <p class="font-serif" style="font-size: 21px; color: var(--charcoal); line-height: 1.15;">Joe R. &amp; Teresa Lozano Long Piano Scholarship</p>
+                  <p class="font-sans" style="color: rgba(0,0,0,0.55); font-size: 14px;">Full tuition scholarship and teaching assistantship at the University of Texas at Austin</p>
+                </div>
+                <div>
+                  <p class="font-serif" style="font-size: 21px; color: var(--charcoal); line-height: 1.15;">Robert and Judi Newman Fellowship</p>
+                  <p class="font-sans" style="color: rgba(0,0,0,0.55); font-size: 14px;">Full-tuition graduate fellowship at the University of Denver, awarded university-wide every two years</p>
+                </div>
+                <div>
+                  <p class="font-serif" style="font-size: 21px; color: var(--charcoal); line-height: 1.15;">First Prize, International Great Composers Competition</p>
+                  <p class="font-sans" style="color: rgba(0,0,0,0.55); font-size: 14px;">First Prize recipient, with Best Schubert Performance distinction</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="padding: 22px; background: var(--cream); border-left: 3px solid var(--copper); box-shadow: 0 12px 28px rgba(0,0,0,0.08);">
+              <p class="font-sans" style="color: var(--copper); font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 14px;">
+                Education &amp; Training
+              </p>
+              <div style="display: grid; gap: 12px;">
+                <div>
+                  <p class="font-serif" style="font-size: 21px; color: var(--charcoal); line-height: 1.15;">Doctor of Musical Arts</p>
+                  <p class="font-sans" style="color: rgba(0,0,0,0.55); font-size: 14px;">University of Texas at Austin; piano studies with Anton Nel</p>
+                </div>
+                <div>
+                  <p class="font-serif" style="font-size: 21px; color: var(--charcoal); line-height: 1.15;">Master &amp; Bachelor of Music, Piano Performance</p>
+                  <p class="font-sans" style="color: rgba(0,0,0,0.55); font-size: 14px;">University of Denver; piano studies with Steven Mayer</p>
+                </div>
+                <div>
+                  <p class="font-serif" style="font-size: 21px; color: var(--charcoal); line-height: 1.15;">Advanced Pedagogical Training</p>
+                  <p class="font-sans" style="color: rgba(0,0,0,0.55); font-size: 14px;">University of Texas at Austin; pedagogy studies with Martha Hilley</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div class="font-sans" style="color: rgba(0,0,0,0.6); line-height: 1.8; space-y: 24px;">
             <p style="margin-bottom: 24px;">
@@ -126,57 +202,6 @@
               </div>
               <figcaption class="font-sans" style="color: rgba(0,0,0,0.5); font-size: 13px; font-style: italic; margin-top: 12px; text-align: center;">Coaching a student during a masterclass.</figcaption>
             </figure>
-
-            <h3 class="font-serif" style="font-size: clamp(1.5rem, 3vw, 2rem); color: var(--charcoal); padding-top: 32px; margin-bottom: 24px;">Awards & Recognition</h3>
-
-            <p style="margin-bottom: 24px;">
-              Dr. Guida's teaching and performance have been recognized through numerous prestigious awards and honors:
-            </p>
-
-            <ul style="list-style: none; padding: 0; margin-bottom: 32px;">
-              <li style="padding: 16px 0; border-bottom: 1px solid rgba(0,0,0,0.1); display: flex; align-items: start; gap: 16px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--copper)" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="12" cy="8" r="7"></circle>
-                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                </svg>
-                <div>
-                  <strong>Steinway &amp; Sons Scottsdale Top Teacher Award</strong><br>
-                  Received in both 2024 and 2025 in recognition of excellence in piano teaching
-                </div>
-              </li>
-              <li style="padding: 16px 0; border-bottom: 1px solid rgba(0,0,0,0.1); display: flex; align-items: start; gap: 16px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--copper)" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="12" cy="8" r="7"></circle>
-                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                </svg>
-                <div>
-                  <strong>Joe R. & Teresa Lozano Long Piano Scholarship</strong><br>
-                  Full tuition scholarship and teaching assistantship for Doctor of Musical Arts 
-                  program at the University of Texas at Austin
-                </div>
-              </li>
-              <li style="padding: 16px 0; border-bottom: 1px solid rgba(0,0,0,0.1); display: flex; align-items: start; gap: 16px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--copper)" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="12" cy="8" r="7"></circle>
-                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                </svg>
-                <div>
-                  <strong>Robert and Judi Newman Fellowship</strong><br>
-                  Prestigious full tuition scholarship for Master's program at University of Denver;
-                  awarded to one recipient university-wide every two years
-                </div>
-              </li>
-              <li style="padding: 16px 0; border-bottom: 1px solid rgba(0,0,0,0.1); display: flex; align-items: start; gap: 16px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--copper)" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
-                  <circle cx="12" cy="8" r="7"></circle>
-                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                </svg>
-                <div>
-                  <strong>First Prize, International Great Composers Competition</strong><br>
-                  Recognized for outstanding piano performance, including "Best Schubert Performance" award
-                </div>
-              </li>
-            </ul>
 
             <h3 class="font-serif" style="font-size: clamp(1.5rem, 3vw, 2rem); color: var(--charcoal); padding-top: 32px; margin-bottom: 24px;">Performance & Specialization</h3>
 
@@ -211,54 +236,6 @@
               Dr. Guida remains actively engaged with the broader musical community, providing his students
               with opportunities to participate in festivals, competitions, and ensemble experiences.
             </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Credentials Summary -->
-  <section class="section-padding bg-cream">
-    <div class="container">
-      <div class="text-center" style="margin-bottom: 64px;">
-        <div class="decorative-line" style="margin: 0 auto 32px;"></div>
-        <h2 class="font-serif" style="font-size: clamp(2rem, 4vw, 3rem); color: var(--charcoal);">Education & Credentials</h2>
-      </div>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; max-width: 1000px; margin: 0 auto;">
-        <div class="card-hover" style="background: white; padding: 32px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-          <h4 class="font-serif" style="font-size: 24px; color: var(--charcoal); margin-bottom: 8px;">Doctor of Musical Arts</h4>
-          <p class="font-sans" style="color: rgba(0,0,0,0.7); margin-bottom: 4px;">Piano Performance</p>
-          <p class="font-sans" style="color: rgba(0,0,0,0.5); font-size: 14px;">University of Texas at Austin</p>
-        </div>
-
-        <div class="card-hover" style="background: white; padding: 32px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-          <h4 class="font-serif" style="font-size: 24px; color: var(--charcoal); margin-bottom: 8px;">Master of Music</h4>
-          <p class="font-sans" style="color: rgba(0,0,0,0.7); margin-bottom: 4px;">Piano Performance</p>
-          <p class="font-sans" style="color: rgba(0,0,0,0.5); font-size: 14px;">University of Denver</p>
-        </div>
-
-        <div class="card-hover" style="background: white; padding: 32px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-          <h4 class="font-serif" style="font-size: 24px; color: var(--charcoal); margin-bottom: 8px;">Bachelor of Music</h4>
-          <p class="font-sans" style="color: rgba(0,0,0,0.7); margin-bottom: 4px;">Piano Performance</p>
-          <p class="font-sans" style="color: rgba(0,0,0,0.5); font-size: 14px;">University of Denver</p>
-        </div>
-      </div>
-
-      <div style="margin-top: 64px; text-align: center;">
-        <h3 class="font-serif" style="font-size: clamp(1.5rem, 3vw, 2rem); color: var(--charcoal); margin-bottom: 32px;">Principal Teachers</h3>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 48px; max-width: 800px; margin: 0 auto;">
-          <div>
-            <p class="font-sans" style="font-weight: 600; color: var(--copper); margin-bottom: 4px;">Anton Nel</p>
-            <p class="font-sans" style="color: rgba(0,0,0,0.5); font-size: 14px;">University of Texas at Austin</p>
-          </div>
-          <div>
-            <p class="font-sans" style="font-weight: 600; color: var(--copper); margin-bottom: 4px;">Steven Mayer</p>
-            <p class="font-sans" style="color: rgba(0,0,0,0.5); font-size: 14px;">University of Denver</p>
-          </div>
-          <div>
-            <p class="font-sans" style="font-weight: 600; color: var(--copper); margin-bottom: 4px;">Martha Hilley</p>
-            <p class="font-sans" style="color: rgba(0,0,0,0.5); font-size: 14px;">Pedagogy, MTNA President</p>
           </div>
         </div>
       </div>

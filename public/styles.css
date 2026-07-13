@@ -211,6 +211,30 @@ body {
   padding: 80px 0;
 }
 
+.about-bio-section {
+  padding-top: 56px;
+}
+
+.about-credentials-mobile {
+  display: none;
+}
+
+.about-sticky-sidebar {
+  position: sticky;
+  top: 72px;
+  padding-top: 12px;
+}
+
+.about-sidebar-photo-frame {
+  width: clamp(285px, 56%, 380px);
+  margin: 0 auto 22px;
+}
+
+.about-sidebar-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1.08;
+}
+
 /* Keep section spacing consistent across inline-styled sections */
 section[style*="padding: 128px 0"],
 section[style*="padding: 96px 0"],
@@ -228,8 +252,16 @@ section[style*="padding-top: 160px"] {
     padding: 48px 0;
   }
 
+  .about-bio-section {
+    padding-top: 40px;
+  }
+
   .about-bio-sidebar {
     display: none;
+  }
+
+  .about-credentials-mobile {
+    display: block;
   }
 }
 
