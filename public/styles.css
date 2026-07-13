@@ -108,40 +108,6 @@ body {
   fill: #fff;
 }
 
-/* Featured performance: video left, text + buttons stacked on the right */
-.featured-perf {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "video text"
-    "video actions";
-  column-gap: 56px;
-  row-gap: 24px;
-  align-items: center;
-}
-
-.featured-perf .fp-video { grid-area: video; }
-.featured-perf .fp-text { grid-area: text; }
-
-.featured-perf .fp-actions {
-  grid-area: actions;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-/* On mobile, stack in reading order: text, then video, then buttons */
-@media (max-width: 768px) {
-  .featured-perf {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "text"
-      "video"
-      "actions";
-    row-gap: 28px;
-  }
-}
-
 .line-reveal {
   position: relative;
 }
