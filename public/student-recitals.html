@@ -44,7 +44,7 @@
   </nav>
 
   <!-- Hero -->
-  <section style="position: relative; min-height: 68vh; display: flex; align-items: center; padding-top: 160px; padding-bottom: 88px; overflow: hidden;">
+  <section class="recitals-hero" style="position: relative; min-height: 68vh; display: flex; align-items: center; padding-top: 160px; padding-bottom: 88px; overflow: hidden;">
     <div style="position: absolute; inset: 0;">
       <img src="/studio-recital.webp" alt="Dr. Michael Guida with piano students at a studio recital" style="width: 100%; height: 100%; object-fit: cover; object-position: center 26%; opacity: 0.9;" fetchpriority="high">
       <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26,26,26,0.82) 0%, rgba(26,26,26,0.56) 52%, rgba(26,26,26,0.88) 100%);"></div>
@@ -64,10 +64,10 @@
   </section>
 
   <!-- Recital Culture -->
-  <section class="section-padding" style="background: white;">
+  <section class="section-padding recital-culture-section" style="background: white;">
     <div class="container">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 64px; align-items: center;">
-        <div>
+      <div class="recital-culture-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 64px; align-items: center;">
+        <div class="recital-culture-copy">
           <div class="decorative-line" style="margin-bottom: 28px;"></div>
           <p class="font-sans" style="color: var(--copper); font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 14px;">
             A Studio Culture of Growth
@@ -80,7 +80,7 @@
             or a more advanced program shaped with musical detail. Students are encouraged to perform when they are ready,
             in a setting that is supportive, focused, and celebratory.
           </p>
-          <div style="display: grid; gap: 16px;">
+          <div class="recital-culture-points" style="display: grid; gap: 16px;">
             <div style="display: flex; gap: 12px; align-items: flex-start;">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--copper)" stroke-width="2.5" style="flex-shrink: 0; margin-top: 2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
               <p class="font-sans" style="color: rgba(0,0,0,0.72);">Regular opportunities to share music with family and friends</p>
@@ -95,7 +95,7 @@
             </div>
           </div>
         </div>
-        <div style="background: var(--cream); padding: 18px; box-shadow: 0 28px 60px rgba(0,0,0,0.14);">
+        <div class="featured-recital-card" style="background: var(--cream); padding: 18px; box-shadow: 0 28px 60px rgba(0,0,0,0.14);">
           <div class="yt-facade" data-yt="OJhyn4o2zwo" data-title="Spring 2026 Student Piano Recital" style="aspect-ratio: 16/9; background: #000;">
             <img src="https://i.ytimg.com/vi/OJhyn4o2zwo/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/OJhyn4o2zwo/hqdefault.jpg'" alt="Spring 2026 Student Piano Recital" loading="lazy" decoding="async">
             <button class="yt-play" type="button" aria-label="Play video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></button>
@@ -117,7 +117,7 @@
   </section>
 
   <!-- Recent Recitals -->
-  <section id="recital-videos" class="section-padding bg-cream">
+  <section id="recital-videos" class="section-padding bg-cream recital-archive-section">
     <div class="container">
       <div class="text-center" style="margin-bottom: 64px;">
         <div class="decorative-line" style="margin: 0 auto 32px;"></div>

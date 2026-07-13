@@ -564,6 +564,63 @@ footer {
     padding-bottom: 48px !important;
   }
 
+  .recitals-hero {
+    min-height: 54vh !important;
+    padding-top: 104px !important;
+    padding-bottom: 38px !important;
+  }
+
+  .recital-culture-section {
+    padding-top: 32px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .recital-culture-grid {
+    display: flex !important;
+    flex-direction: column;
+    gap: 28px !important;
+  }
+
+  .featured-recital-card {
+    order: 1;
+    padding: 12px !important;
+  }
+
+  .recital-culture-copy {
+    order: 2;
+  }
+
+  .recital-culture-copy .decorative-line {
+    margin-bottom: 20px !important;
+  }
+
+  .recital-culture-copy h2 {
+    margin-bottom: 16px !important;
+  }
+
+  .recital-culture-copy p[style*="font-size: 18px"] {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+    margin-bottom: 20px !important;
+  }
+
+  .recital-culture-points {
+    display: none !important;
+  }
+
+  .recital-archive-section {
+    padding-top: 40px !important;
+  }
+
+  .recital-archive-section .text-center {
+    margin-bottom: 32px !important;
+  }
+
+  .recital-archive-section p[style*="font-size: 18px"] {
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+  }
+
   /* Reduce gap between grid items */
   div[style*="gap: 64px"] {
     gap: 32px !important;
