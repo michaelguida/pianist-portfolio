@@ -221,7 +221,517 @@ section[style*="padding-top: 160px"] {
   padding-bottom: 80px !important;
 }
 
+/* Editorial hero system */
+.site-hero {
+  position: relative;
+  min-height: clamp(540px, 62vh, 700px);
+  padding: 132px 0 72px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #111;
+}
+
+.site-hero-media,
+.site-hero-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.site-hero-image {
+  position: relative;
+  left: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.site-hero-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+}
+
+.site-hero-copy {
+  width: min(100%, 620px);
+  color: white;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.site-hero-copy--left {
+  margin-right: auto;
+  text-align: left;
+}
+
+.site-hero-copy--right {
+  margin-left: auto;
+  text-align: left;
+}
+
+.site-hero-line {
+  margin-bottom: 24px;
+}
+
+.site-hero-kicker {
+  margin-bottom: 18px;
+  color: var(--copper-light);
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.site-hero-title {
+  margin-bottom: 24px;
+  color: white;
+  font-size: clamp(3.25rem, 5.2vw, 5rem);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.site-hero-title span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.site-hero-lead {
+  max-width: 590px;
+  margin-bottom: 34px;
+  color: rgba(255, 255, 255, 0.96);
+  font-size: clamp(1.18rem, 1.7vw, 1.45rem);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.site-hero-lead:last-child {
+  margin-bottom: 0;
+}
+
+.site-hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.home-hero {
+  min-height: min(780px, calc(100svh - 44px));
+  padding-top: 136px;
+  padding-bottom: 90px;
+}
+
+.home-hero .site-hero-image {
+  left: 8%;
+  object-position: 50% 49%;
+}
+
+.home-hero .site-hero-overlay {
+  background:
+    linear-gradient(90deg,
+      rgba(12, 12, 12, 0.96) 0%,
+      rgba(12, 12, 12, 0.82) 34%,
+      rgba(12, 12, 12, 0.34) 62%,
+      rgba(12, 12, 12, 0.14) 100%),
+    linear-gradient(180deg,
+      rgba(12, 12, 12, 0.24) 0%,
+      rgba(12, 12, 12, 0.02) 45%,
+      rgba(12, 12, 12, 0.34) 100%);
+}
+
+.home-hero .site-hero-copy {
+  width: min(100%, 650px);
+}
+
+.home-hero .site-hero-title {
+  font-size: clamp(3.4rem, 5.6vw, 5.4rem);
+}
+
+.site-hero-scroll {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.42);
+  transform: translateX(-50%);
+}
+
+.about-hero .site-hero-image {
+  left: 10%;
+  object-position: 50% 35%;
+}
+
+.about-hero .site-hero-overlay {
+  background:
+    linear-gradient(90deg,
+      rgba(12, 12, 12, 0.97) 0%,
+      rgba(12, 12, 12, 0.84) 36%,
+      rgba(12, 12, 12, 0.34) 62%,
+      rgba(12, 12, 12, 0.18) 100%),
+    linear-gradient(180deg,
+      rgba(12, 12, 12, 0.22) 0%,
+      rgba(12, 12, 12, 0.04) 48%,
+      rgba(12, 12, 12, 0.28) 100%);
+}
+
+.performances-hero .site-hero-image {
+  left: -6%;
+  object-position: 50% 42%;
+  filter: contrast(1.06);
+}
+
+.performances-hero .site-hero-overlay {
+  background:
+    linear-gradient(90deg,
+      rgba(12, 12, 12, 0.12) 0%,
+      rgba(12, 12, 12, 0.24) 38%,
+      rgba(12, 12, 12, 0.74) 58%,
+      rgba(12, 12, 12, 0.96) 78%,
+      rgba(12, 12, 12, 0.98) 100%),
+    linear-gradient(180deg,
+      rgba(12, 12, 12, 0.22) 0%,
+      rgba(12, 12, 12, 0.02) 48%,
+      rgba(12, 12, 12, 0.24) 100%);
+}
+
+.recitals-hero {
+  min-height: clamp(600px, 68vh, 760px);
+  align-items: flex-end;
+  padding-bottom: 56px;
+}
+
+.recitals-hero .site-hero-image {
+  object-position: 50% 26%;
+}
+
+.recitals-hero .site-hero-overlay {
+  background:
+    linear-gradient(180deg,
+      rgba(12, 12, 12, 0.5) 0%,
+      rgba(12, 12, 12, 0.12) 34%,
+      rgba(12, 12, 12, 0.28) 56%,
+      rgba(12, 12, 12, 0.94) 100%),
+    linear-gradient(90deg,
+      rgba(12, 12, 12, 0.3) 0%,
+      rgba(12, 12, 12, 0.04) 70%);
+}
+
+.recitals-hero .site-hero-copy {
+  width: min(100%, 760px);
+}
+
+.contact-hero .site-hero-image {
+  left: 5%;
+  object-position: 50% 50%;
+}
+
+.contact-hero .site-hero-overlay {
+  background:
+    linear-gradient(90deg,
+      rgba(12, 12, 12, 0.98) 0%,
+      rgba(12, 12, 12, 0.86) 38%,
+      rgba(12, 12, 12, 0.34) 64%,
+      rgba(12, 12, 12, 0.16) 100%),
+    linear-gradient(180deg,
+      rgba(12, 12, 12, 0.2) 0%,
+      rgba(12, 12, 12, 0.04) 50%,
+      rgba(12, 12, 12, 0.28) 100%);
+}
+
 @media (max-width: 768px) {
+  .site-hero {
+    min-height: 570px;
+    padding: 108px 0 52px;
+    align-items: center;
+  }
+
+  .home-hero {
+    min-height: clamp(640px, calc(100svh - 36px), 740px);
+    padding-bottom: 64px;
+  }
+
+  .site-hero-image,
+  .home-hero .site-hero-image,
+  .about-hero .site-hero-image,
+  .performances-hero .site-hero-image,
+  .contact-hero .site-hero-image {
+    left: 0;
+    width: 100%;
+  }
+
+  .home-hero .site-hero-image {
+    object-position: 55% 48%;
+  }
+
+  .about-hero .site-hero-image {
+    object-position: 54% 34%;
+  }
+
+  .performances-hero .site-hero-image {
+    object-position: 50% 44%;
+  }
+
+  .contact-hero .site-hero-image {
+    object-position: 68% 50%;
+  }
+
+  .recitals-hero {
+    min-height: 590px;
+    align-items: flex-end;
+    padding-top: 100px;
+    padding-bottom: 38px;
+  }
+
+  .recitals-hero .site-hero-image {
+    object-position: 50% 25%;
+  }
+
+  .home-hero .site-hero-overlay,
+  .about-hero .site-hero-overlay,
+  .performances-hero .site-hero-overlay,
+  .contact-hero .site-hero-overlay {
+    background: linear-gradient(180deg,
+      rgba(12, 12, 12, 0.58) 0%,
+      rgba(12, 12, 12, 0.7) 42%,
+      rgba(12, 12, 12, 0.9) 100%);
+  }
+
+  .recitals-hero .site-hero-overlay {
+    background: linear-gradient(180deg,
+      rgba(12, 12, 12, 0.48) 0%,
+      rgba(12, 12, 12, 0.08) 34%,
+      rgba(12, 12, 12, 0.32) 58%,
+      rgba(12, 12, 12, 0.96) 100%);
+  }
+
+  .site-hero-container {
+    justify-content: center;
+  }
+
+  .site-hero-copy,
+  .site-hero-copy--left,
+  .site-hero-copy--right {
+    max-width: 370px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .recitals-hero .site-hero-copy {
+    max-width: 390px;
+  }
+
+  .site-hero-line {
+    margin: 0 auto 20px;
+  }
+
+  .site-hero-kicker {
+    margin-bottom: 14px;
+    font-size: 0.73rem;
+  }
+
+  .site-hero-title,
+  .home-hero .site-hero-title {
+    margin-bottom: 20px;
+    font-size: clamp(2.8rem, 12vw, 4rem);
+    line-height: 1.08;
+  }
+
+  .site-hero-lead {
+    max-width: 340px;
+    margin: 0 auto 28px;
+    font-size: 1.08rem;
+    line-height: 1.5;
+  }
+
+  .site-hero-actions {
+    width: min(100%, 310px);
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .site-hero-actions .btn {
+    width: 100%;
+  }
+
+  .site-hero-scroll {
+    display: none;
+  }
+}
+
+/* Piano lessons hero */
+.lessons-hero {
+  position: relative;
+  min-height: min(760px, 100svh);
+  padding: 136px 0 80px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--charcoal);
+}
+
+.lessons-hero-media,
+.lessons-hero-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.lessons-hero-image {
+  position: relative;
+  left: -8%;
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: 50% 46%;
+}
+
+.lessons-hero-overlay {
+  background:
+    linear-gradient(90deg,
+      rgba(15, 15, 15, 0.08) 0%,
+      rgba(15, 15, 15, 0.18) 34%,
+      rgba(15, 15, 15, 0.7) 55%,
+      rgba(15, 15, 15, 0.95) 74%,
+      rgba(15, 15, 15, 0.98) 100%),
+    linear-gradient(180deg,
+      rgba(15, 15, 15, 0.16) 0%,
+      rgba(15, 15, 15, 0.02) 45%,
+      rgba(15, 15, 15, 0.2) 100%);
+}
+
+.lessons-hero-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.lessons-hero-copy {
+  width: min(100%, 610px);
+  margin-left: auto;
+  text-align: left;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.5);
+}
+
+.lessons-hero-award {
+  max-width: 530px;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.84rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.lessons-hero-line {
+  margin-bottom: 24px;
+}
+
+.lessons-hero-title {
+  margin-bottom: 24px;
+  color: white;
+  font-size: clamp(3.25rem, 5.2vw, 5rem);
+  font-weight: 300;
+  line-height: 1.08;
+}
+
+.lessons-hero-title span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.lessons-hero-lead {
+  max-width: 600px;
+  margin-bottom: 34px;
+  color: rgba(255, 255, 255, 0.96);
+  font-size: clamp(1.18rem, 1.7vw, 1.45rem);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.lessons-hero-actions {
+  display: flex;
+  gap: 18px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.lessons-hero .btn-secondary {
+  border-color: rgba(255, 255, 255, 0.65);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .lessons-hero {
+    min-height: 680px;
+    padding: 112px 0 56px;
+  }
+
+  .lessons-hero-image {
+    left: 0;
+    width: 100%;
+    object-position: 46% 52%;
+  }
+
+  .lessons-hero-overlay {
+    background: linear-gradient(180deg,
+      rgba(15, 15, 15, 0.62) 0%,
+      rgba(15, 15, 15, 0.72) 38%,
+      rgba(15, 15, 15, 0.88) 100%);
+  }
+
+  .lessons-hero-container {
+    justify-content: center;
+  }
+
+  .lessons-hero-copy {
+    max-width: 370px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .lessons-hero-award {
+    margin: 0 auto 18px;
+    font-size: 0.74rem;
+    line-height: 1.55;
+  }
+
+  .lessons-hero-line {
+    margin: 0 auto 20px;
+  }
+
+  .lessons-hero-title {
+    margin-bottom: 22px;
+    font-size: clamp(2.75rem, 13vw, 4rem);
+    line-height: 1.08;
+  }
+
+  .lessons-hero-lead {
+    max-width: 330px;
+    margin: 0 auto 32px;
+    font-size: 1.16rem;
+    line-height: 1.48;
+  }
+
+  .lessons-hero-actions {
+    width: min(100%, 310px);
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .lessons-hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
   .section-padding {
     padding: 48px 0;
   }

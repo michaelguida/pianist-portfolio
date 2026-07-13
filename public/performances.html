@@ -44,22 +44,18 @@
   </nav>
 
   <!-- Hero -->
-  <section style="position: relative; min-height: 56vh; display: flex; align-items: center; padding-top: 150px; padding-bottom: 72px; overflow: hidden;">
-    <div style="position: absolute; inset: 0;">
-      <img src="/performance-hero.webp" alt="Dr. Michael Guida performing at the piano" style="width: 100%; height: 100%; object-fit: cover; object-position: center 42%; opacity: 0.9; filter: contrast(1.06);" fetchpriority="high">
-      <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26,26,26,0.78) 0%, rgba(26,26,26,0.5) 50%, rgba(26,26,26,0.84) 100%);"></div>
+  <section class="site-hero performances-hero">
+    <div class="site-hero-media">
+      <img src="/performance-hero.webp" alt="Dr. Michael Guida performing at the piano" class="site-hero-image" fetchpriority="high">
+      <div class="site-hero-overlay"></div>
     </div>
-    <div class="container text-center" style="position: relative; z-index: 10;">
-      <div class="decorative-line" style="margin: 0 auto 32px;"></div>
-      <p class="font-sans" style="color: var(--copper-light); font-size: 13px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 16px;">
-        Dr. Michael Guida, Pianist
-      </p>
-      <h1 class="font-serif" style="font-size: clamp(3rem, 7vw, 5rem); color: white; font-weight: 300; line-height: 1.12; margin-bottom: 24px;">
-        Performances
-      </h1>
-      <p class="font-sans" style="color: rgba(255,255,255,0.78); font-size: clamp(1rem, 2vw, 1.25rem); max-width: 760px; margin: 0 auto 36px; line-height: 1.8;">
-        Concert recordings and selected works that reflect the artistry, tone, and musical depth behind Dr. Guida's teaching.
-      </p>
+    <div class="container site-hero-container">
+      <div class="site-hero-copy site-hero-copy--right">
+        <p class="font-sans site-hero-kicker">Dr. Michael Guida, Pianist</p>
+        <div class="decorative-line site-hero-line"></div>
+        <h1 class="font-serif site-hero-title">Performances</h1>
+        <p class="font-sans site-hero-lead">Concert recordings and selected works that reflect the artistry, tone, and musical depth behind Dr. Guida's teaching.</p>
+      </div>
     </div>
   </section>
 

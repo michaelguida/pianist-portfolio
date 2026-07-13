@@ -124,36 +124,31 @@
   </nav>
 
   <!-- Hero Section -->
-  <section style="position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-    <div style="position: absolute; inset: 0;">
-      <img src="/michael-guida-profile.webp" alt="Dr. Michael Guida performing at the piano" style="width: 100%; height: 100%; object-fit: cover;" fetchpriority="high">
-      <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26,26,26,0.85) 0%, rgba(45,45,45,0.75) 50%, rgba(26,26,26,0.9) 100%);"></div>
+  <section class="site-hero home-hero">
+    <div class="site-hero-media">
+      <img src="/michael-guida-profile.webp" alt="Dr. Michael Guida performing at the piano" class="site-hero-image" fetchpriority="high">
+      <div class="site-hero-overlay"></div>
     </div>
-
-    <div style="position: relative; z-index: 10; text-align: center; padding: 0 32px; max-width: 1200px; margin: 0 auto;">
-      <div class="animate-fade-up">
-        <span style="display: inline-block; font-family: 'Outfit', sans-serif; color: var(--copper-light); font-size: 14px; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 24px;">Pianist & Teacher</span>
-      </div>
-      <h1 class="animate-fade-up-delay font-serif" style="font-size: clamp(2.5rem, 8vw, 6rem); color: white; font-weight: 300; line-height: 1.2; margin-bottom: 32px;">
-        Dr. Michael Guida's<br>
-        <span style="font-style: italic; font-weight: 400;">Piano Studio</span>
-      </h1>
-      <p class="animate-fade-up-delay-2 font-sans" style="color: rgba(255,255,255,0.72); font-size: clamp(1rem, 2vw, 1.25rem); max-width: 760px; margin: 0 auto 48px; line-height: 1.8;">
-        A Scottsdale piano studio for students who want thoughtful teaching, serious musical growth,
-        and a deeper connection to music.
-      </p>
-      <div class="animate-fade-up-delay-2" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
-        <a href="/piano-lessons-scottsdale" class="btn btn-primary">
-          Explore Piano Lessons
-        </a>
-        <a href="/about-me" class="btn btn-secondary">
-          Meet Dr. Guida
-        </a>
+    <div class="container site-hero-container">
+      <div class="site-hero-copy site-hero-copy--left">
+        <p class="font-sans site-hero-kicker animate-fade-up">Pianist &amp; Teacher</p>
+        <div class="decorative-line site-hero-line animate-fade-up"></div>
+        <h1 class="font-serif site-hero-title animate-fade-up-delay">
+          Dr. Michael Guida's<br>
+          <span>Piano Studio</span>
+        </h1>
+        <p class="font-sans site-hero-lead animate-fade-up-delay-2">
+          A Scottsdale piano studio for students who want thoughtful teaching, serious musical growth,
+          and a deeper connection to music.
+        </p>
+        <div class="site-hero-actions animate-fade-up-delay-2">
+          <a href="/piano-lessons-scottsdale" class="btn btn-primary">Explore Piano Lessons</a>
+          <a href="/about-me" class="btn btn-secondary">Meet Dr. Guida</a>
+        </div>
       </div>
     </div>
-
-    <div style="position: absolute; bottom: 48px; left: 50%; transform: translateX(-50%);">
-      <svg style="color: rgba(255,255,255,0.3); animation: bounce 2s infinite;" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <div class="site-hero-scroll">
+      <svg style="animation: bounce 2s infinite;" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <polyline points="6 9 12 15 18 9"></polyline>
       </svg>
     </div>
