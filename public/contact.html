@@ -209,7 +209,7 @@
           <div class="decorative-line" style="margin: 0 auto 32px;"></div>
           <h2 class="font-serif" style="font-size: clamp(2rem, 4vw, 2.5rem); color: var(--charcoal);">Common Questions</h2>
         </div>
-        <div style="space-y: 32px;">
+        <div id="faq" style="space-y: 32px;">
           <div style="padding-bottom: 24px; border-bottom: 1px solid rgba(0,0,0,0.1); margin-bottom: 24px;">
             <h3 class="font-serif" style="font-size: 20px; color: var(--charcoal); margin-bottom: 12px;">Do I need a piano at home?</h3>
             <p class="font-sans" style="color: rgba(0,0,0,0.6); line-height: 1.8;">Yes, and if you currently do not own one, I can help find you a piano that suits your budget and space.</p>
@@ -377,6 +377,36 @@
         submitBtn.textContent = originalBtnText;
       }
     });
+  </script>
+
+  <!-- Build FAQ structured data from the visible FAQ above, so schema and page can never drift -->
+  <script>
+    (function () {
+      var items = document.querySelectorAll('#faq > div');
+      var main = [];
+      items.forEach(function (item) {
+        var q = item.querySelector('h3');
+        var a = item.querySelector('p');
+        if (!q || !a) return;
+        main.push({
+          "@type": "Question",
+          "name": q.textContent.trim(),
+          "acceptedAnswer": { "@type": "Answer", "text": a.textContent.trim() }
+        });
+      });
+      if (!main.length) return;
+      var canonical = document.querySelector('link[rel="canonical"]');
+      var base = canonical ? canonical.href : location.href.split(/[?#]/)[0];
+      var s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": base + "#faq",
+        "mainEntity": main
+      });
+      document.head.appendChild(s);
+    })();
   </script>
 </body>
 </html>

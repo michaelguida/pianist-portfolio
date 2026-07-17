@@ -5,6 +5,7 @@
     { "source": "/index.html", "destination": "/", "statusCode": 301 },
     { "source": "/about-me.html", "destination": "/about-me", "statusCode": 301 },
     { "source": "/piano-lessons-scottsdale.html", "destination": "/piano-lessons-scottsdale", "statusCode": 301 },
+    { "source": "/the-serious-student.html", "destination": "/the-serious-student", "statusCode": 301 },
     { "source": "/performances.html", "destination": "/performances", "statusCode": 301 },
     { "source": "/student-recitals.html", "destination": "/student-recitals", "statusCode": 301 },
     { "source": "/contact.html", "destination": "/contact", "statusCode": 301 },
