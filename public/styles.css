@@ -737,8 +737,8 @@ section[style*="padding-top: 160px"] {
 
 @media (max-width: 768px) {
   .lessons-hero {
-    min-height: 680px;
-    padding: 112px 0 56px;
+    min-height: 540px;
+    padding: 104px 0 50px;
   }
 
   .lessons-hero-image {
