@@ -13,6 +13,7 @@
     { "source": "/terms-conditions.html", "destination": "/terms-conditions", "statusCode": 301 },
     { "source": "/home", "destination": "/", "statusCode": 301 },
     { "source": "/home-1", "destination": "/", "statusCode": 301 },
-    { "source": "/terms-and-conditions", "destination": "/terms-conditions", "statusCode": 301 }
+    { "source": "/terms-and-conditions", "destination": "/terms-conditions", "statusCode": 301 },
+    { "source": "/piano-lessons-scottsdale-old", "destination": "/piano-lessons-scottsdale", "statusCode": 301 }
   ]
 }
