@@ -195,8 +195,7 @@ body {
 
 .about-sticky-sidebar {
   position: sticky;
-  top: 72px;
-  padding-top: 12px;
+  top: 96px;
 }
 
 .about-sidebar-photo-frame {
@@ -232,7 +231,7 @@ body {
 }
 
 .about-credentials-heading--education {
-  margin-top: 20px;
+  margin-top: 28px;
 }
 
 .about-credential-list {
@@ -240,8 +239,8 @@ body {
 }
 
 .about-credential-item {
-  margin-bottom: 10px;
-  padding-bottom: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
   border-bottom: 1px solid rgba(184, 111, 55, 0.18);
 }
 
