@@ -707,6 +707,28 @@
       else phoneField.value = '';
     });
 
+    // Mirror leads into HubSpot CRM (fire-and-forget; the Web3Forms email is the backup if this ever fails)
+    function sendLeadToHubSpot(data) {
+      try {
+        var parts = (data.name || '').trim().split(/\s+/);
+        var payload = {
+          fields: [
+            { name: 'firstname', value: parts.shift() || '' },
+            { name: 'lastname', value: parts.join(' ') },
+            { name: 'email', value: data.email || '' },
+            { name: 'phone', value: data.phone || '' },
+            { name: 'message', value: data.message || '' }
+          ],
+          context: { pageUri: location.href, pageName: document.title }
+        };
+        fetch('https://api.hsforms.com/submissions/v3/integration/submit/246810762/7475ad11-3054-4d93-b871-6c664fa5b3eb', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        }).catch(function () {});
+      } catch (e) {}
+    }
+
     applicationForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
@@ -724,6 +746,20 @@
       submitBtn.textContent = 'Sending...';
 
       const formData = new FormData(applicationForm);
+
+      // Mirror this application into HubSpot CRM (non-blocking; the email above remains the backup)
+      sendLeadToHubSpot({
+        name: formData.get('name'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        message: [
+          'SERIOUS STUDENT APPLICATION',
+          'Goals: ' + (formData.get('q1_goals') || ''),
+          'Dream pieces: ' + (formData.get('q2_dream_pieces') || ''),
+          'Experience: ' + (formData.get('q3_experience') || ''),
+          'Practice time: ' + (formData.get('q4_practice_time') || '')
+        ].join('\n\n')
+      });
 
       try {
         const response = await fetch('https://api.web3forms.com/submit', {

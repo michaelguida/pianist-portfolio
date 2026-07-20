@@ -322,6 +322,28 @@
     interestField.addEventListener('change', syncExperienceRequired);
     syncExperienceRequired();
 
+    // Mirror leads into HubSpot CRM (fire-and-forget; the Web3Forms email is the backup if this ever fails)
+    function sendLeadToHubSpot(data) {
+      try {
+        var parts = (data.name || '').trim().split(/\s+/);
+        var payload = {
+          fields: [
+            { name: 'firstname', value: parts.shift() || '' },
+            { name: 'lastname', value: parts.join(' ') },
+            { name: 'email', value: data.email || '' },
+            { name: 'phone', value: data.phone || '' },
+            { name: 'message', value: data.message || '' }
+          ],
+          context: { pageUri: location.href, pageName: document.title }
+        };
+        fetch('https://api.hsforms.com/submissions/v3/integration/submit/246810762/7475ad11-3054-4d93-b871-6c664fa5b3eb', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        }).catch(function () {});
+      } catch (e) {}
+    }
+
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
@@ -340,6 +362,18 @@
       submitBtn.textContent = 'Sending...';
 
       const formData = new FormData(contactForm);
+
+      // Mirror this lead into HubSpot CRM (non-blocking; the email above remains the backup)
+      sendLeadToHubSpot({
+        name: formData.get('name'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        message: [
+          formData.get('message'),
+          formData.get('interest') ? 'Interest: ' + formData.get('interest') : '',
+          formData.get('experience') ? 'Experience: ' + formData.get('experience') : ''
+        ].filter(Boolean).join('\n\n')
+      });
 
       try {
         const response = await fetch('https://api.web3forms.com/submit', {
