@@ -28,6 +28,13 @@ body {
   --sage: #7d8471;
 }
 
+/* Form fields: 16px minimum keeps iOS Safari from auto-zooming on focus */
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
 .bg-charcoal { background-color: var(--charcoal); }
 .bg-warm-gray { background-color: var(--warm-gray); }
 .bg-cream { background-color: var(--cream); }
