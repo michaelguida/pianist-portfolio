@@ -173,6 +173,26 @@
     }
   }
   </script>
+
+  <!-- ============================================================
+       Meta (Facebook/Instagram) Pixel for ad tracking.
+       Paste your Pixel ID between the quotes below to turn it on.
+       Get it at business.facebook.com > Events Manager > Data Sources.
+       Until an ID is set, this stays completely inert (no tracking,
+       no network calls), so it's safe to leave in place.
+       ============================================================ -->
+  <script>
+    window.META_PIXEL_ID = ''; // e.g. '1234567890123456'
+    if (window.META_PIXEL_ID) {
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', window.META_PIXEL_ID);
+      fbq('track', 'PageView');
+    }
+  </script>
 </head>
 <body>
   <!-- Minimal top bar (deliberately no full nav: this is a focused landing page) -->
@@ -357,7 +377,7 @@
           <p class="font-sans" style="color: var(--copper); font-weight: 700; font-size: 14px; letter-spacing: 0.12em; margin-bottom: 14px;">01</p>
           <h3 class="font-serif" style="font-size: 22px; color: var(--charcoal); margin-bottom: 12px;">The weekly lesson</h3>
           <p class="font-sans" style="color: rgba(0,0,0,0.62); line-height: 1.75;">
-            Sixty minutes, one on one, on my Steinway grand in McCormick Ranch. Can be in person or online.
+            Sixty minutes, one on one, on my Steinway grand at my private studio in Scottsdale (McCormick Ranch area). Can be in person or online.
           </p>
         </div>
         <div class="card-hover" style="background: white; padding: 36px; border-top: 4px solid var(--copper);">
@@ -773,6 +793,8 @@
           errorMessage.style.display = 'none';
           applicationForm.reset();
           successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          // Tell Meta an application was submitted (only fires once a Pixel ID is set above)
+          if (window.fbq) fbq('track', 'Lead');
         } else {
           throw new Error(result.message || 'Submission failed');
         }
