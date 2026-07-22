@@ -57,10 +57,45 @@ Marketing reference (not part of the website — this folder is outside `public/
 
 ---
 
-## Normal Students — (for after vacation; Google + reviews is the real engine here)
+## Normal Students (all ages & levels) — for after vacation
 
-_To be written. The bulk of the 30–35 student goal comes from Google Business Profile
-+ reviews + Google Local Services Ads, launched once home and able to respond quickly._
+The bulk of the 30–35 student goal comes from Google Business Profile + reviews +
+Google Search/Local Services Ads, launched once home and able to respond quickly.
+Grounded in the live /piano-lessons-scottsdale page: the spine is "every lesson is
+built around the person at the piano" (Young Pianists / Adult Students / Developing &
+Advanced), first song in the first lesson, Steinway Top Teacher + DMA, McCormick Ranch,
+in person or online, 30/45/60 min.
+
+### Facebook ad
+
+**Primary text:**
+
+> Every student comes to the piano for a different reason, and the best lessons are built around that.
+>
+> Maybe it's your child sitting down at the keys for the first time. Maybe you always meant to learn and never did. Maybe you played years ago and want to come back to it, or you already play and you're ready to go further.
+>
+> I'm Dr. Michael Guida, a two-time Top Steinway Teacher in Scottsdale with a doctorate in piano performance. I teach all of them: kids and adults, first-timers and advancing players. Every lesson is shaped around the person at the piano, your goals, your pace, and the music you actually want to play.
+>
+> Beginners play a simple song with both hands in the very first lesson. From there we build real technique, confidence, and a repertoire you love, with patient and encouraging guidance every step of the way.
+>
+> Lessons at my Scottsdale studio in McCormick Ranch, in person or online, 30 to 60 minutes.
+>
+> Now accepting new students. Let's find your starting point.
+
+**Headline:** Piano Lessons in Scottsdale, All Ages & Levels
+**Description:** Built around each student. Kids to adults, beginner to advanced.
+**CTA:** Book Now (or "Send Message")
+**URL:** https://www.michaelguidapiano.com/piano-lessons-scottsdale
+
+### Google Search ad
+
+**Headlines:** Piano Lessons in Scottsdale · Kids & Adult Piano Lessons · Two-Time Top Steinway Teacher · All Ages & Levels Welcome · Beginners to Advanced · Play Your First Song, Day One · In-Person or Online
+
+**Descriptions:**
+- Learn from a two-time Top Steinway Teacher, DMA. Kids and adults, beginner to advanced.
+- Warm, individualized lessons in Scottsdale. Play your first song in your first lesson.
+
+**Final URL:** https://www.michaelguidapiano.com/piano-lessons-scottsdale
 
 ---
 
