@@ -89,8 +89,15 @@ Walk Michael through Meta Ads Manager (Guida Piano Studio Ads account). Recommen
 - **Do NOT** A/B test copy at this budget/volume — one strong ad, let the pixel data guide. See ad-copy.md.
 
 ### 🟡 This week (mostly Michael's action)
-- **Send review-request texts** to 10–15 past/current students (free, highest-ROI). Draft texts are
-  in the conversation / can be regenerated; needs his Google review link (GBP → "Ask for reviews").
+- **Send review-request texts** to 10–15 past/current students (free, highest-ROI). Get the Google
+  review link first: GBP dashboard → "Ask for reviews" → copy the short link (opens the review box in
+  one tap). Send individually + personalized, warmest relationships first. Ready-to-send drafts:
+  - *Current/recent:* "Hi [Name], it's Michael. I'm growing the studio this year and a quick Google
+    review from you would genuinely help other families find me. Takes about a minute: [link] 🙏
+    Thank you, it means a lot!"
+  - *Past students:* "Hi [Name], Michael Guida here, I hope you're doing great! I'm building up my
+    studio's online presence and would be so grateful for a short review of your time studying with me.
+    One tap here: [link]. Thank you so much!"
 - **Film the 60-sec video** for the serious ad (optional for launch). Claude still owes him the
   **shot script** — write it: ~20–30s of him playing beautifully + a talking-head line about the
   white-glove / daily-access promise; no teleprompter needed. Shoot in good light.
