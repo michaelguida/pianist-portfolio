@@ -27,6 +27,7 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta name="theme-color" content="#1a1a1a">
   <link rel="stylesheet" href="/styles.css">
+  <script src="/pixel.js" defer></script>
 </head>
 <body>
   <!-- Navigation -->
@@ -384,6 +385,7 @@
         if (result.success) {
           successMessage.style.display = 'block';
           errorMessage.style.display = 'none';
+          if (window.fbq) fbq('track', 'Lead');
           contactForm.reset();
           successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         } else {
