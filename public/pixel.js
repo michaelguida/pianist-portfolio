@@ -16,3 +16,14 @@ fbq('track', 'PageView');
   t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
   y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
 })(window, document, "clarity", "script", "xvcagtw2jh");
+
+/* Google Analytics 4 (gtag.js) - G-8FVZHSGZGM */
+(function(){
+  var s=document.createElement('script');s.async=1;
+  s.src='https://www.googletagmanager.com/gtag/js?id=G-8FVZHSGZGM';
+  document.head.appendChild(s);
+})();
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-8FVZHSGZGM');
