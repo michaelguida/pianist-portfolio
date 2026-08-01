@@ -2,27 +2,25 @@
 
 Working checklist. Full details/IDs are in `marketing/ads-launch-plan.md`; ad copy in `marketing/ad-copy.md`.
 
-## 🔴 To launch (the one blocker)
-- [ ] **Build the serious-student ad** in Ads Manager (account: *Guida Piano Studio Ads*)
-  - [ ] Objective: **Leads**, conversion = Website, optimize for the **Lead** event (pixel `2644187165976712`)
-  - [ ] Audience: Scottsdale, Paradise Valley, Arcadia, N. Scottsdale + ~10–15 mi; age ~30–60
-  - [ ] Budget: **$15–20/day**
-  - [ ] Creative: masterclass photo (4:5), **WARM copy** from ad-copy.md, CTA **Apply Now** → `/the-serious-student`
-  - [ ] **Schedule start ~Aug 1** (auto-runs while away; applications pool in HubSpot + email)
+## 🔴 Next up (the big lever)
+- [ ] **Get Google reviews from students** — the highest-ROI, lasts-forever move
+  - [ ] Grab the Google review link (GBP → "Ask for reviews")
+  - [ ] Text 10–15 past/current students (drafts in ads-launch-plan.md)
+  - [ ] Consider a QR code for in-studio + a simple ask-cadence so it's a habit
+- [ ] **Optimize the Google Business Profile** (description, services, photos, first post)
 
-## 🟡 This week (free, high-value)
-- [ ] Grab your **Google review link** (GBP → "Ask for reviews")
-- [ ] **Text 10–15 past/current students** for reviews (drafts in ads-launch-plan.md)
-- [ ] **Film the 60-sec video** in good light (ask Claude for the shot script first)
-- [ ] Decide on an **applicant autoresponder** ("got it, I'll be in touch")
+## 🟡 Soon
+- [ ] Turn on the **normal-student Google engine** (Search / Local Services Ads); normal-student ad copy ready → `/piano-lessons-scottsdale`
+- [ ] **Film the 60-sec video** for the serious ad (swap in as a 2nd creative; ask Claude for the shot script)
+- [ ] **Applicant autoresponder** — instant "got your application, I'll be in touch" (Web3Forms autoresponder)
+- [ ] In GA4, **star `phone_click` + `generate_lead` as Key events** once they appear in Admin → Events (~24–48h after first firing)
 
-## 🟢 When you're back (~Aug 3)
-- [ ] **Optimize Google Business Profile** (description, services, photos, first post)
-- [ ] Turn on the **normal-student Google engine** (Search / Local Services Ads)
-- [ ] **Add the pixel site-wide** + build the **normal-student ad** (copy ready → `/piano-lessons-scottsdale`)
-- [ ] **CAPI upgrade** (server-side tracking for the Lead event)
-- [ ] HubSpot polish: lead-status pipeline; split the 4 answers into their own properties
+## 🔵 Optional polish
+- [ ] HubSpot: lead-status pipeline (New → Interview → Decision); split the 4 application answers into their own properties
+- [ ] Clarity ↔ GA4 integration (jump from GA4 segments to session recordings)
 
 ## ✅ Done
-Facebook Page · business portfolio · ad account + payment · pixel live & verified ·
-HubSpot lead routing split + tested · serious & normal ad copy written.
+Serious ad launched · Facebook Page · business portfolio + ad account + payment ·
+Meta Pixel + GA4 + Clarity site-wide · Lead/Contact + generate_lead/phone_click conversions ·
+**server-side Conversions API (deduped)** · Meta domain verified · privacy policy + cookie banner ·
+own traffic filtered (GA4 + Clarity) · HubSpot lead routing split + tested · ad copy written.

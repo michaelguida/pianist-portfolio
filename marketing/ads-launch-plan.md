@@ -2,7 +2,24 @@
 
 **Handoff doc.** If you're Claude picking this up on another machine: this is the current state of
 Dr. Michael Guida's paid-ads launch and what's left to do. Read this first, then continue from
-"WHAT'S LEFT." All IDs/keys below are client-side (already public in `public/*.html`), not secrets.
+"WHAT'S LEFT." All IDs/keys below are client-side (already public in `public/*.html`), not secrets —
+except the CAPI token, which lives only as a Vercel env var (`META_CAPI_TOKEN`), never in the repo.
+
+---
+
+## Current status (post-launch)
+
+**The serious-student ad is LIVE** (launched, running). The full setup is complete:
+- ✅ Serious ad built + running (Facebook, → `/the-serious-student`)
+- ✅ Tracking site-wide: Meta Pixel, GA4 (`G-8FVZHSGZGM`), Microsoft Clarity (`xvcagtw2jh`)
+- ✅ Conversions wired: form submit → Meta `Lead` + GA4 `generate_lead`; phone tap → Meta `Contact` + GA4 `phone_click`
+- ✅ **Server-side Conversions API** live (`/api/capi` Vercel function, deduped by `event_id`, token in Vercel env)
+- ✅ Meta **domain verified** (michaelguidapiano.com) + events auto-prioritized
+- ✅ Privacy policy discloses tools + a slim cookie banner site-wide
+- ✅ Own traffic excluded from GA4 (Internal Traffic filter) + Clarity (IP block)
+- ✅ HubSpot lead routing split (Serious Student Applications vs Piano Lesson Inquiries) + Web3Forms email
+
+**What's left is GROWTH, not setup** — see WHAT'S LEFT. Top priority: Google reviews + GBP.
 
 ---
 
