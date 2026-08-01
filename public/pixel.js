@@ -57,8 +57,10 @@ document.addEventListener('click', function (e) {
   if (!link) return;
   var eid = mgEventId();
   if (window.gtag) gtag('event', 'phone_click', { link_url: link.getAttribute('href') });
-  if (window.fbq) fbq('track', 'Contact', {}, { eventID: eid });
+  // A phone tap counts as both a Contact and a Lead (calls/texts are real inquiries)
+  if (window.fbq) { fbq('track', 'Contact', {}, { eventID: eid }); fbq('track', 'Lead', {}, { eventID: eid }); }
   mgSendCapi('Contact', eid);
+  mgSendCapi('Lead', eid);
 });
 
 /* Cookie notice — slim dismissible bottom bar (remembers dismissal) */
