@@ -211,6 +211,16 @@
     gtag('js', new Date());
     gtag('config', 'G-8FVZHSGZGM');
   </script>
+
+  <!-- Track "Call or Text" (tel:) clicks as a phone_click / Contact conversion -->
+  <script>
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest && e.target.closest('a[href^="tel:"]');
+      if (!link) return;
+      if (window.gtag) gtag('event', 'phone_click', { link_url: link.getAttribute('href') });
+      if (window.fbq) fbq('track', 'Contact');
+    });
+  </script>
 </head>
 <body>
   <!-- Minimal top bar (deliberately no full nav: this is a focused landing page) -->

@@ -27,3 +27,11 @@ window.dataLayer=window.dataLayer||[];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-8FVZHSGZGM');
+
+/* Track "Call or Text" (tel:) link clicks as a phone_click / Contact conversion */
+document.addEventListener('click', function (e) {
+  var link = e.target.closest && e.target.closest('a[href^="tel:"]');
+  if (!link) return;
+  if (window.gtag) gtag('event', 'phone_click', { link_url: link.getAttribute('href') });
+  if (window.fbq) fbq('track', 'Contact');
+});
