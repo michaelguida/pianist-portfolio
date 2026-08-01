@@ -386,6 +386,7 @@
           successMessage.style.display = 'block';
           errorMessage.style.display = 'none';
           if (window.fbq) fbq('track', 'Lead');
+          if (window.gtag) gtag('event', 'generate_lead');
           contactForm.reset();
           successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         } else {

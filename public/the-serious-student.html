@@ -822,6 +822,7 @@
           successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           // Tell Meta an application was submitted (only fires once a Pixel ID is set above)
           if (window.fbq) fbq('track', 'Lead');
+          if (window.gtag) gtag('event', 'generate_lead');
         } else {
           throw new Error(result.message || 'Submission failed');
         }
