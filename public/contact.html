@@ -385,8 +385,10 @@
         if (result.success) {
           successMessage.style.display = 'block';
           errorMessage.style.display = 'none';
-          if (window.fbq) fbq('track', 'Lead');
+          var mgId = (window.mgEventId ? mgEventId() : String(Date.now()));
+          if (window.fbq) fbq('track', 'Lead', {}, { eventID: mgId });
           if (window.gtag) gtag('event', 'generate_lead');
+          if (window.mgSendCapi) mgSendCapi('Lead', mgId, { email: formData.get('email'), phone: formData.get('phone') });
           contactForm.reset();
           successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         } else {

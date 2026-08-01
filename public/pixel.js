@@ -10,6 +10,29 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', window.META_PIXEL_ID);
 fbq('track', 'PageView');
 
+/* --- Conversions API bridge: mirror browser conversions to the server with a
+   shared event_id so Meta deduplicates. Fire-and-forget; never blocks or breaks
+   anything, and no-ops if the /api/capi endpoint or token isn't set up. --- */
+function mgEventId() {
+  return (self.crypto && crypto.randomUUID) ? crypto.randomUUID()
+    : (Date.now() + '-' + Math.random().toString(16).slice(2));
+}
+function mgCookie(name) {
+  var m = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+  return m ? m.pop() : '';
+}
+function mgSendCapi(eventName, eventId, extra) {
+  try {
+    var body = { event_name: eventName, event_id: eventId, event_source_url: location.href,
+      fbp: mgCookie('_fbp'), fbc: mgCookie('_fbc') };
+    if (extra) { for (var k in extra) body[k] = extra[k]; }
+    fetch('/api/capi', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body), keepalive: true }).catch(function () {});
+  } catch (e) {}
+}
+window.mgEventId = mgEventId;
+window.mgSendCapi = mgSendCapi;
+
 /* Microsoft Clarity - session recordings + heatmaps (project xvcagtw2jh) */
 (function(c,l,a,r,i,t,y){
   c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -32,8 +55,10 @@ gtag('config', 'G-8FVZHSGZGM');
 document.addEventListener('click', function (e) {
   var link = e.target.closest && e.target.closest('a[href^="tel:"]');
   if (!link) return;
+  var eid = mgEventId();
   if (window.gtag) gtag('event', 'phone_click', { link_url: link.getAttribute('href') });
-  if (window.fbq) fbq('track', 'Contact');
+  if (window.fbq) fbq('track', 'Contact', {}, { eventID: eid });
+  mgSendCapi('Contact', eid);
 });
 
 /* Cookie notice — slim dismissible bottom bar (remembers dismissal) */

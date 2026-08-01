@@ -212,13 +212,25 @@
     gtag('config', 'G-8FVZHSGZGM');
   </script>
 
-  <!-- Track "Call or Text" (tel:) clicks as a phone_click / Contact conversion -->
+  <!-- Conversions API bridge + "Call or Text" (tel:) click tracking -->
   <script>
+    function mgEventId() { return (self.crypto && crypto.randomUUID) ? crypto.randomUUID() : (Date.now() + '-' + Math.random().toString(16).slice(2)); }
+    function mgCookie(n) { var m = document.cookie.match('(^|;)\\s*' + n + '\\s*=\\s*([^;]+)'); return m ? m.pop() : ''; }
+    function mgSendCapi(eventName, eventId, extra) {
+      try {
+        var body = { event_name: eventName, event_id: eventId, event_source_url: location.href, fbp: mgCookie('_fbp'), fbc: mgCookie('_fbc') };
+        if (extra) { for (var k in extra) body[k] = extra[k]; }
+        fetch('/api/capi', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body), keepalive: true }).catch(function () {});
+      } catch (e) {}
+    }
+    window.mgEventId = mgEventId; window.mgSendCapi = mgSendCapi;
     document.addEventListener('click', function (e) {
       var link = e.target.closest && e.target.closest('a[href^="tel:"]');
       if (!link) return;
+      var eid = mgEventId();
       if (window.gtag) gtag('event', 'phone_click', { link_url: link.getAttribute('href') });
-      if (window.fbq) fbq('track', 'Contact');
+      if (window.fbq) fbq('track', 'Contact', {}, { eventID: eid });
+      mgSendCapi('Contact', eid);
     });
   </script>
 
@@ -851,9 +863,11 @@
           errorMessage.style.display = 'none';
           applicationForm.reset();
           successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          // Tell Meta an application was submitted (only fires once a Pixel ID is set above)
-          if (window.fbq) fbq('track', 'Lead');
+          // Application submitted: browser pixel + server-side CAPI, deduped by event ID
+          var mgId = (window.mgEventId ? mgEventId() : String(Date.now()));
+          if (window.fbq) fbq('track', 'Lead', {}, { eventID: mgId });
           if (window.gtag) gtag('event', 'generate_lead');
+          if (window.mgSendCapi) mgSendCapi('Lead', mgId, { email: formData.get('email'), phone: formData.get('phone') });
         } else {
           throw new Error(result.message || 'Submission failed');
         }
