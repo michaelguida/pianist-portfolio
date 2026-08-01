@@ -35,3 +35,32 @@ document.addEventListener('click', function (e) {
   if (window.gtag) gtag('event', 'phone_click', { link_url: link.getAttribute('href') });
   if (window.fbq) fbq('track', 'Contact');
 });
+
+/* Cookie notice — slim dismissible bottom bar (remembers dismissal) */
+(function () {
+  try { if (localStorage.getItem('cookieNoticeDismissed')) return; } catch (e) {}
+  function build() {
+    if (document.getElementById('cookieNotice')) return;
+    var bar = document.createElement('div');
+    bar.id = 'cookieNotice';
+    bar.setAttribute('role', 'region');
+    bar.setAttribute('aria-label', 'Cookie notice');
+    bar.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#111;border-top:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.78);font-family:"Outfit",-apple-system,sans-serif;font-size:13px;line-height:1.5;transform:translateY(100%);transition:transform .4s ease;';
+    bar.innerHTML = '<div style="max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:16px;">'
+      + '<p style="margin:0;flex:1;">We use cookies for analytics and advertising. See our <a href="/privacy-policy" style="color:#fff;text-decoration:underline;text-underline-offset:2px;">Privacy Policy</a>.</p>'
+      + '<button type="button" aria-label="Dismiss" style="background:none;border:0;color:rgba(255,255,255,0.5);font-size:20px;line-height:1;cursor:pointer;padding:4px 8px;flex-shrink:0;">×</button>'
+      + '</div>';
+    document.body.appendChild(bar);
+    requestAnimationFrame(function () { bar.style.transform = 'translateY(0)'; });
+    var btn = bar.querySelector('button');
+    btn.onmouseenter = function () { btn.style.color = '#fff'; };
+    btn.onmouseleave = function () { btn.style.color = 'rgba(255,255,255,0.5)'; };
+    btn.onclick = function () {
+      bar.style.transform = 'translateY(100%)';
+      try { localStorage.setItem('cookieNoticeDismissed', '1'); } catch (e) {}
+      setTimeout(function () { bar.remove(); }, 400);
+    };
+  }
+  if (document.body) build();
+  else document.addEventListener('DOMContentLoaded', build);
+})();
