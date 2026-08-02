@@ -12,7 +12,7 @@ Marketing reference (not part of the website — this folder is outside `public/
 >
 > Maybe you played as a kid and stopped. Maybe you never got the chance. Or maybe there's one piece you've always dreamed of sitting down and actually playing.
 >
-> I'm Dr. Michael Guida, a two-time Top Steinway Teacher here in Scottsdale, and helping adults finally do this is my favorite part of the job. There's nothing like watching someone who thought it was "too late" play something they never believed they could.
+> I'm Dr. Michael Guida, a two-time Steinway Top Teacher here in Scottsdale, and helping adults finally do this is my favorite part of the job. There's nothing like watching someone who thought it was "too late" play something they never believed they could.
 >
 > I'm opening a few private spots for serious adults who want to learn the right way. Not once-a-week-and-forget-it, but with special access to me all week long:
 >
@@ -28,7 +28,7 @@ Marketing reference (not part of the website — this folder is outside `public/
 > Apply below, and let's talk.
 
 **Headline:** Finally Learn Piano, the Right Way
-**Description:** Private coaching with a two-time Top Steinway Teacher. By application.
+**Description:** Private coaching with a two-time Steinway Top Teacher. By application.
 **Call-to-action button:** Apply Now (fall back to "Learn More" if Apply Now isn't offered)
 **Website URL:** https://www.michaelguidapiano.com/the-serious-student
 
@@ -44,13 +44,13 @@ Marketing reference (not part of the website — this folder is outside `public/
 
 > Most people take a piano lesson once a week and forget it by Tuesday.
 >
-> My private students text me every day. Send me a video, I send one back. I'm a two-time Top Steinway Teacher in Scottsdale, and I take only a handful of serious adults at a time.
+> My private students text me every day. Send me a video, I send one back. I'm a two-time Steinway Top Teacher in Scottsdale, and I take only a handful of serious adults at a time.
 >
 > White-glove. Not cheap. The fastest way you'll ever learn.
 >
 > A few spots open. Apply below.
 
-**Headline:** Learn From a Two-Time Top Steinway Teacher
+**Headline:** Learn From a Two-Time Steinway Top Teacher
 **Description:** A handful of private spots. By application.
 **CTA:** Apply Now
 **URL:** https://www.michaelguidapiano.com/the-serious-student
@@ -74,7 +74,7 @@ in person or online, 30/45/60 min.
 >
 > Maybe it's your child sitting down at the keys for the first time. Maybe you always meant to learn and never did. Maybe you played years ago and want to come back to it, or you already play and you're ready to go further.
 >
-> I'm Dr. Michael Guida, a two-time Top Steinway Teacher in Scottsdale with a doctorate in piano performance. I teach kids and adults, first-timers and advancing players. Every lesson is shaped around the person at the piano, your goals, your pace, and the music you actually want to play.
+> I'm Dr. Michael Guida, a two-time Steinway Top Teacher in Scottsdale with a doctorate in piano performance. I teach kids and adults, first-timers and advancing players. Every lesson is shaped around the person at the piano, your goals, your pace, and the music you actually want to play.
 >
 > Beginners play a simple song with both hands in the very first lesson. From there we build real technique, confidence, and a repertoire you love, with patient and encouraging guidance every step of the way.
 >
@@ -89,10 +89,10 @@ in person or online, 30/45/60 min.
 
 ### Google Search ad
 
-**Headlines:** Piano Lessons in Scottsdale · Kids & Adult Piano Lessons · Two-Time Top Steinway Teacher · All Ages & Levels Welcome · Beginners to Advanced · Play Your First Song, Day One · In-Person or Online
+**Headlines:** Piano Lessons in Scottsdale · Kids & Adult Piano Lessons · Two-Time Steinway Top Teacher · All Ages & Levels Welcome · Beginners to Advanced · Play Your First Song, Day One · In-Person or Online
 
 **Descriptions:**
-- Learn from a two-time Top Steinway Teacher, DMA. Kids and adults, beginner to advanced.
+- Learn from a two-time Steinway Top Teacher, DMA. Kids and adults, beginner to advanced.
 - Warm, individualized lessons in Scottsdale. Play your first song in your first lesson.
 
 **Final URL:** https://www.michaelguidapiano.com/piano-lessons-scottsdale
@@ -112,7 +112,7 @@ not keep rewriting; the A/B settles the rest.
 
 > Imagine sitting at the piano and playing the music you love. No more waiting for "someday." It starts right now.
 >
-> I'm Dr. Michael Guida, a two-time Top Steinway Teacher in Scottsdale with a doctorate in piano performance and more than twenty years of teaching. Helping people finally play the music they've dreamed about is the whole reason I do this.
+> I'm Dr. Michael Guida, a Steinway Top Teacher in Scottsdale with a doctorate in piano performance and more than twenty years of teaching. Helping people finally play the music they've dreamed about is the whole reason I do this.
 >
 > Maybe you've wanted this for decades. Maybe you want your child to grow up with music in their hands. Maybe you played years ago and miss who you were at the piano. Wherever you're starting, every lesson is built around you and the songs you actually want to play. Beginners play a real song with both hands in the very first lesson.
 >
@@ -123,7 +123,7 @@ not keep rewriting; the A/B settles the rest.
 > I take a small number of new students each semester, so every student gets my full attention. If you'd like one of those spots, tap below and tell me who the lessons are for. I'll be in touch personally.
 
 **Headline:** Finally Play the Music You've Always Loved
-**Description:** Private lessons in Scottsdale with a two-time Top Steinway Teacher. Kids and adults. First lesson risk free.
+**Description:** Private lessons in Scottsdale with a Steinway Top Teacher. Kids and adults. First lesson risk free.
 **CTA:** Learn More
 
 ### Ad B — outcome-led (A/B variant; same body, swap opener + headline)
