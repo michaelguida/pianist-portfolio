@@ -74,7 +74,7 @@ in person or online, 30/45/60 min.
 >
 > Maybe it's your child sitting down at the keys for the first time. Maybe you always meant to learn and never did. Maybe you played years ago and want to come back to it, or you already play and you're ready to go further.
 >
-> I'm Dr. Michael Guida, a two-time Top Steinway Teacher in Scottsdale with a doctorate in piano performance. I teach all of them: kids and adults, first-timers and advancing players. Every lesson is shaped around the person at the piano, your goals, your pace, and the music you actually want to play.
+> I'm Dr. Michael Guida, a two-time Top Steinway Teacher in Scottsdale with a doctorate in piano performance. I teach kids and adults, first-timers and advancing players. Every lesson is shaped around the person at the piano, your goals, your pace, and the music you actually want to play.
 >
 > Beginners play a simple song with both hands in the very first lesson. From there we build real technique, confidence, and a repertoire you love, with patient and encouraging guidance every step of the way.
 >
@@ -96,6 +96,60 @@ in person or online, 30/45/60 min.
 - Warm, individualized lessons in Scottsdale. Play your first song in your first lesson.
 
 **Final URL:** https://www.michaelguidapiano.com/piano-lessons-scottsdale
+
+---
+
+## Local Lead-Form Ad — Steinway studio + no-risk trial (LIVE STRATEGY, Aug 2026)
+
+Proven format: Facebook **Instant Form** (like the old SoundMusical academy ad that drove
+volume), adapted to the local premium studio. **Form feeds the website** (thank-you screen
+sends them to /piano-lessons-scottsdale to warm up before the call). Positioning: **the dream
+is the promise; the Steinway + credentials are the proof.** No-risk first lesson is the closer,
+not the headline. Two ads, one ad set, ~$15/day, A/B the hook (dream vs outcome). LOCKED — do
+not keep rewriting; the A/B settles the rest.
+
+### Ad A — dream-led (primary)
+
+> Imagine sitting at the piano and playing the music you love. No more waiting for "someday." It starts right now.
+>
+> I'm Dr. Michael Guida, a two-time Top Steinway Teacher in Scottsdale with a doctorate in piano performance and more than twenty years of teaching. Helping people finally play the music they've dreamed about is the whole reason I do this.
+>
+> Maybe you've wanted this for decades. Maybe you want your child to grow up with music in their hands. Maybe you played years ago and miss who you were at the piano. Wherever you're starting, every lesson is built around you and the songs you actually want to play. Beginners play a real song with both hands in the very first lesson.
+>
+> You'd be learning in a private studio, on a Steinway grand, with a plan made for you and no one else. That's the difference between wishing you could play and actually doing it.
+>
+> Your first lesson is completely risk free. If we're not the right fit, you owe nothing. If you decide to continue, we simply begin your semester together.
+>
+> I take a small number of new students each semester, so every student gets my full attention. If you'd like one of those spots, tap below and tell me who the lessons are for. I'll be in touch personally.
+
+**Headline:** Finally Play the Music You've Always Loved
+**Description:** Private lessons in Scottsdale with a two-time Top Steinway Teacher. Kids and adults. First lesson risk free.
+**CTA:** Learn More
+
+### Ad B — outcome-led (A/B variant; same body, swap opener + headline)
+
+Opener replaces Ad A's first paragraph:
+
+> In your very first lesson, you'll sit down and play a real song with both hands. Not scales, not theory, a song. That's how every new student at my Scottsdale studio begins.
+
+Then continue with Ad A's body from "I'm Dr. Michael Guida…" (drop the duplicate first-song line in the "Maybe you've wanted this…" paragraph).
+
+**Headline:** Play Your First Song at Your First Lesson
+**Description:** (same as Ad A)
+
+### Instant form
+
+- **Type:** Higher intent (adds a confirm step to trim junk).
+- **Prefill:** full name, email, phone.
+- **Questions:**
+  1. Who will be taking lessons? — Myself / My child / Both
+  2. Would you prefer? — In person in Scottsdale / Online / Either
+  3. When are you hoping to start? — As soon as possible / In the next month or two / Just exploring
+- **Completion screen (form → website):** "Thanks! Now take a look inside the studio. I'll personally reach out within a day to set up your first lesson. While you wait, come see the studio, the Steinway, and what students say." → button **View the Studio** → /piano-lessons-scottsdale
+
+### Round-2 tests (AFTER data — do NOT block launch)
+- Audience-specific ads: parents-only vs adults-only (a focused message beats one-size). Write to whichever segment the data shows dominating.
+- "Fast progress" conviction hook (Michael's real differentiator): e.g. "Most people think piano takes years before it's enjoyable. I don't believe that." Test as a 3rd hook.
 
 ---
 
